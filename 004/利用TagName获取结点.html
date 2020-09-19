@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+				返回的是一个数组，一个装有所有符合元素的结点
+			*/
+		   window.onload = function(){
+			  // var aLis = document.getElementsByTagName("li");
+			  // alert(aLis);
+			var aLis = document.getElementById("node").getElementsByTagName("li");
+			for(var i in aLis){
+			alert(aLis[i].innerHTML);
+			}
+		   }
+		</script>
+	</head>
+	<body>
+		<ul id = "node">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+		<ol>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ol>
+	</body>
+</html>

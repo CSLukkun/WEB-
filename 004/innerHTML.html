@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			//innerHtml  标签间的所有内容
+			window.onload = function(){
+				var oBtn = document.getElementById("btn");
+				var oDiv = document.getElementById("div1");
+				oBtn.onclick = function(){
+					alert(oDiv.innerHTML);
+					oDiv.innerHTML = "<h1>加油</h1>"
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1"><em>斜体</em></div>
+		<input type="button" name="" id="btn" value="" />
+	</body>
+</html>

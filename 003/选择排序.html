@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var a = [9,8,7,6,5,4,3,2,1];
+			function choose(a){
+			for(var i =0;i<a.length;i++){
+				for(var j = i+1;j<a.length;j++){
+					if(a[i] > a[j]){
+						var tmp = a[i];
+						a[i] = a[j];
+						a[j] = tmp;
+					}
+				}
+			}
+			return a;
+			}
+			//一直与第一个数进行比较
+			alert(a);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

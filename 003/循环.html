@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			js中函数的概念：
+				函数的值当他被调用时执行的可重复使用的代码块
+			定义：
+				无参函数的声明：
+					function 函数名(){
+						函数体；
+					}
+			函数的分类
+				内置函数：系统函数，官方函数
+				用户自定义的函数
+			*/
+
+			function print(){
+				for(var i = 0;i < 10;i++){
+							   document.write("Hello world!<br/>");
+				}
+			}
+			function printn(n){//有参函数
+				for(;n<10;n++){
+					document.write(n+"<br/>");
+				}
+			}
+			//每一个函数内，都有一个内置的数组，是一个变量，叫做argument，可以存储当前函数传入的所有参数
+			//访问arguments的里面数据
+			function calall(){
+					for(var i = 0 ;i < arguments.length ;i++){
+						document.write(arguments[i]);
+					}
+				}
+			calall(3,4,5,5,6,7);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

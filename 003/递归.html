@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			函数的递归调用：
+				方法：
+					1.首先去找临界值，无需计算得到值
+					2.这一层与上一层的关系
+					3.假设当前函数已经可以使用了，调用自身计算上一次的运行结果，在写出这次运行结果。
+					
+			*/
+		   function add(n){
+			   if(n==1){
+				   return 1
+			   }
+			   else{
+				   return n+add(n-1);
+			   }
+		   }
+		   alert(add(10));
+		   //本层的数加上下面各层的数
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

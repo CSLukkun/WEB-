@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			//显示当前的时间
+			// function showDate(){
+			// 	var d =new Date();
+			// 	var year = d.getFullYear();
+			// 	var month = d.getMonth();
+			// 	var date = d.getDate();
+			// 	var day = d.getDay();
+			// 	if (day == 0){
+			// 		day = "日";
+			// 	}
+			// 	var h = d.getHours();
+			// 	var m = d.getMinutes();
+			// 	var s = d.getSeconds();
+			// 	document.write("今天是: " + year + "年" + month +"月" + day +"日" + "星期" + day);
+			// }
+			// showDate();
+			
+			//获取N天后的时间
+			function numOfDate(n){
+				var d = new Date();
+				var date = d.getDate();
+				d.setDate(date + n);
+				return d;
+			}
+			alert(numOfDate(10));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

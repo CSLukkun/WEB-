@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var a =10;
+			function show(a){
+				a = 5;
+				alert(a);
+			}
+			//声明在当前函数中的变量和当前函数的形参，作用域都限制在该函数内
+			//当函数调用结束以后，这些变量和形参将被释放
+			var a = [10,20];
+			function show(arr){
+				arr.push(30,40);
+				alert(arr);
+			}
+			alert(a);
+			show(a);
+			alert(a);
+			//数组是引用数据类型：
+			//函数运行的空间是预先分配好的，一旦被分配好空间，就不能进行改变了
+			//所有的符号数据类型不存在函数中，而是存在于堆栈中
+			//所有的复合数据类型、存储的都是门牌号。所以这类的数据，我们叫做应用数据类型
+			//由于是引用数据类型，所以不需要通过返回值来返回
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var num1 = 2;
+			var num2 = 3;
+			var tmp= num1;
+			num1 = num2;
+			num2 = tmp;
+			alert(" num1的值 "+num1+", num2的值 "+num2);//顺序结构
+			
+			var num =10;
+			if(num%2==0){
+				alert("num为偶数");
+			}
+			else{
+				alert("num不是偶数");
+			}
+			//注在js中，我们把{}的括起来所有语句都当做一条语句 分子结构
+			var grade = "A";
+			switch(grade){
+				case "A":
+					alert("成绩优秀");
+					break;
+				case "b":
+					alert("成绩良好");
+					break;
+				default:
+					alert("查不到你的成绩");
+					}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

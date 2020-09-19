@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*?id = 5&&search = ok
+				获取url中的内容
+			*/
+		   function getsearch(search,key){
+			   var start = search.indexOf(key);
+			   if(start ==-1){
+				   return ;
+			   }
+			   else{
+				   var end = search.indexOf("&",start);
+				   if(end == -1)
+				   //这是最后一个键值对
+				   end = search.length;
+				   var str = search.substring(start,end);//end不包括
+				   //alert(str);
+				   var arr = str.split("=");
+				   return arr[1];
+			   }
+		   }
+		   var search = "?id=5&&search=ok"
+		   getsearch(search,"id")
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

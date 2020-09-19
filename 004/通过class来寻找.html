@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			document.getElementsByClassName("*");
+			//封装一个兼容的方法
+				function ElementsByClassName(parent,classStr){
+					var nodes = parent.getElementsByTagName("*");
+					alert(nodes[0].innerHTML);
+					var result = [];
+					for(var i = 0 ;i < nodes.length ; i++){
+						if(nodes[i].className==classStr){
+							result.push(nodes[i]);
+						}
+					}
+					return result;
+				}
+				//兼容就是用通用的解决通用
+				window.onload = function(){
+					
+					alert(ElementsByClassName(document,"box")[0].innerHTML);
+				}
+		</script>
+	</head>
+	<body>
+		<div class = "box">12214312</div>
+	</body>
+</html>

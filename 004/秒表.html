@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			
+			*{
+				margin: 0;
+			}
+			#first{
+				width:500px;
+				height: 600px;
+				background-color: #808080;
+				padding-top: 30px;
+				}
+
+			#time{
+				width: 400px;
+				height: 100px;
+				margin: auto;
+				background-color: #00FFFF;
+				
+			}
+			#clas{
+				width: 150px;
+				height: 50px;
+				margin: auto;
+				position: relative; /*脱离文档流*/
+				top:25px /*设置偏移量*/
+			}
+			
+			#clas span{
+				
+				font-size: 30px;
+			}
+			input{
+				width: 100px;
+				display: block;
+				margin: auto;
+				margin-top: 20px;
+				
+			}
+		</style>
+		<script type="text/javascript">
+			function $(id){
+				return document.getElementById(id);
+			}
+			window.onload = function(){
+				var count = 0
+				$("start").onclick = function(){
+					timer = setInterval(function(){
+						count++;
+						//需要改变当前页面上时分秒的值
+						$("s").innerHTML = ":" + showNum(count % 60);
+						$("m").innerHTML = ":" + showNum(parseInt(count/60));
+						$("h").innerHTML = showNum(parseInt(count/3600));
+					},10)
+				}
+				$("stop").onclick = function(){
+					clearInterval(timer);
+				}
+				$("end").onclick = function(){
+					clearInterval(timer);
+					count = 0;
+					$("s").innerHTML = ":00"
+					$("m").innerHTML = ":00"
+					$("h").innerHTML = "00"
+					
+				}
+			}
+			function showNum(num){
+				if(num < 10){
+					return "0"+num;
+				}
+				else{
+					return num
+				}
+			}
+		</script>
+	</head>
+	<body>
+			<div id="first">
+				<div id="time">
+					<div id="clas">
+						<span id="h">
+							00
+						</span>
+						<span id="m">
+							:00
+						</span>
+						<span id="s">
+							:00
+						</span>
+					</div>
+				</div>
+				<input type="button" name="" id="start" value="开始" />
+				<input type="button" name="" id="stop" value="停止" />
+				<input type="button" name="" id="end" value="结束" />
+			</div>
+	</body>
+</html>

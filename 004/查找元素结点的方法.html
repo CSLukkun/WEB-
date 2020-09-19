@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			//document.getElementById(id);
+			/*
+				通过当前元素结点的id,获取对应的元素结点
+				tagName 获取元素结点的标签名
+				innerHTML 获取元素结点标签间的内容，会解析标签
+				还包括html属性
+				如id，title,className
+			*/
+		   window.onload = function(){
+			   var oDIV=document.getElementById("div1");
+			   alert(oDIV.tagName);
+			   alert(oDIV.innerHTML);
+			   alert(oDIV.className);
+			   alert(oDIV.style.width);
+			   alert(oDIV.style.backgroundColor);//去杠变大写
+		   }
+
+		</script>
+	</head>
+	<body>
+			<div id="div1" class="box" style="width: 100px;background-color: #000000;"><em>123</em></div>
+	</body>
+</html>

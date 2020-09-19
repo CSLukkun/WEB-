@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			// window.open();
+			// open();
+			// 第一个参数:要加载URL,
+			// 第二个参数:窗口的名称或者窗口的目标,
+			// 第三个参数:一串具有特殊意义的字符串
+			window.onload = function(){
+			var obtn = document.getElementById("btn");
+			obtn.onclick = function(){
+				window.open("http://www.baidu.com");
+				//注如果只有一个参数，调用open，会打开新窗口
+				window.open("http://www.baidu.com","百度");
+				//注第二个参数，是给打开的新窗口起一个名字，然后以后，再去在家url，就在这个已经起好名字的窗口里显示
+				 //opener是一个对象，指的是当前窗口的父窗口
+			}
+			}
+		</script>
+	</head>
+	<body>
+			<input type="button" name="" id="btn" value="按钮" />
+	</body>
+</html>

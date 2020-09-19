@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function(){
+				var oDiv = document.getElementById("div1");
+				//alert(oDiv.style.backgroundColor);//获取不到
+				//只能找到内嵌式的css样式
+				alert(getComputedStyle(oDiv)["width"]);//获取的是有效的样式
+				//火狐谷歌safari
+				//IE：
+				alert(oDiv.currentStyle("width"))
+				function getStyle(elem,attr){
+					return elem.currentStyle ? elem.currentStyle[attr] : 
+					getComputedStyle(elem)["width"];//返回的是一个对象
+				}
+			}
+		</script>
+		<style type="text/css">
+			#div1{
+				background-color: red;
+				width:300px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1" style="height: 300px;"></div>
+	</body>
+</html>

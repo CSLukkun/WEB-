@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			//前后两个数两两比较，符和条件交换位置
+			var a = [9,8,7,6,5,4,3,2,1]
+			var tmp = 0;
+			function maopao(n){
+				for(var i = 0;i < a.length;i++){
+					for(var j = 0; j < a.length-1-i;j++)
+						if(a[j]>a[j+1])
+						{
+							tmp = a[j]
+							a[j] = a[j+1];
+							a[j+1] = tmp;
+						}
+				}
+				return n;
+			}
+			var result = maopao(a);
+			alert(result);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

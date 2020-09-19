@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+				ECMAB标准 ECMAJavascript
+				严格模式：
+					即这种严格模式下，浏览器会对Js的要求更加苛刻
+			*/
+		   // function m1(){
+			  //  max = 10;
+		   // }
+		   function m1(){
+			   "use strict"//写在哪个作用域下，哪个作用域下的所有代码都遵从严格模式
+			   max = 10;
+		   }
+		   m1();
+		   alert(max);
+		   //如何在给变量赋值的时候，没有使用var给该变量声明，那么当成全局变量进行处理
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
