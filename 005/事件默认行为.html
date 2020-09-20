@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			//a的跳转，submit的提交
+			/*
+				阻止默认行为
+					event.preventDefault();
+					event.returnValue = false;
+					return false;
+			*/
+		   
+		</script>
+	</head>
+	<body>
+		<a href="">test</a>
+		<form action="" method="">
+			<input type="text" id="" value="" />
+			<input type="submit" name="" id="" value="tiji" />
+		</form>
+		<script type="text/javascript">
+			var oLink = document.getElementsByTagName("a")[0];
+			var oForm = document.getElementsByTagName("form")[0];
+			var oInput = document.getElementsByTagName("input");
+			oLink.onclick = function(e){
+				console.log('aaa');
+				e.preventDefault();
+				e.returnValue = false;
+				return false;
+				
+				
+			}
+			oForm.onsubmit = function(){
+				console.log("aaa");
+				return false;
+			}
+			oInput[0].onkeydown = function(){
+				return false;
+			}
+		</script>
+	</body>
+</html>

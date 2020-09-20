@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+				正则表达式是由普通字符及特殊字符组成的对字符串进行过滤的逻辑公式
+			*/
+		</script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//1.直面变量
+			// var reg = /abc/;//规则写在两个斜杠之间
+			// //2.构造函数
+			// var reg = new RegExp();
+			
+			// //test():正则表达式方法,用来检测str中时候含有复合正则规则的子串
+			// var str = "abc";
+			// var flag = reg.test(str);
+			// alert(flag);
+			// //修饰符 g全局匹配，搜索整个子串
+			// var reg = /abc/g;
+			// var str = "abcabc";
+			// alert(str.match(reg));
+			// //match方法
+			// //修饰符 i忽略大小写
+			var reg = /abc/i;
+			var str = "aBcabc";
+			alert(reg.test(str));
+			// //search方法，字符串的方法，查找符合规则子串的位置
+			// var reg = /abc/;
+			// var str = "aBcabc";
+			// alert(str.search(reg));
+			// //split
+			// //replace
+			// var reg = /tmd/ig;
+			// var str = "abc tmd abc TMD";
+			// console.log(str.replace(reg,"***"));
+			// //exec是正则表达式的方法，若找到了匹配的文本，则返回一个结果数组，否则返回null
+			var str ="good 1 good";
+			var reg=/good/g;
+			console.log(reg.exec(str));
+			console.log(reg.exec(str));
+			console.log(reg.exec(str));
+			/*
+			但是，当 RegExpObject 是一个全局正则表达式时，exec() 的行为就稍微复杂一些。它会在 RegExpObject 的 lastInde
+			x 属性指定的字符处开始检索字符串 string。当 exec() 找到了与表达式相匹配的文本时，在匹配后，它将把 RegExpObject 的 lastIndex 属性
+			设置为匹配文本的最后一个字符的下一个位置。
+			这就是说，您可以通过反复调用 exec() 方法来遍历字符串中的所有匹配文本。当 exec() 再也找不到匹配的文本时，它将返回 null，并把 lastIndex 属性重置为 0。
+			*/
+			
+		</script>
+	</body>
+</html>

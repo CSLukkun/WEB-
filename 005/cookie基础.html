@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			//http:超文本传输协议
+			//他是一个无状态的协议，所以需要在客户端缓存一些数据
+			//cookie:是指缓存在本地客户端的数据
+			//包括增删改查四个操作
+		</script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//查询操作
+			console.log(document.cookie);
+			document.cookie = "username=honny"//通过Application找到
+			//关闭浏览器后cookie消失
+			//设置有效期
+			var oDate = new Date();
+			oDate.setDate(oDate.getDate()+3);
+			document.cookie = "username=honny;expires="+oDate;
+			document.cookie = "username=honny1"//通过Application找到
+			//同名的cookie会被覆盖
+			//清除cookie
+			// var oDate = new Date();
+			// oDate.setDate(oDate.getDate()-1)
+			// document.cookie = "username=honny1;expires="+oDate;
+			
+			function setCookie(name,value,day){
+				var oDate = new Date();
+				oDate.setDate(oDate.getDate()+day)
+				document.cookie = name+"="+value+";expires="+oDate;
+			}
+			function getCookie(name){
+				var str = document.cookie
+				var arr = str.split(";");
+				for(var i = 0;i<arr.length;i++){
+					var start = arr[i].split("=");
+					if(start[0]==name){
+						return start[1];
+					}
+				}
+				//首先获得cookie字符串，在经过；切分，再经过-切分
+			}
+			function rmCookie(name){
+				setCookie(name,1,-1);
+			}
+			setCookie("username","honny3",3);
+			console.log(getCookie("username"));
+			rmCookie("username");
+		</script>
+	</body>
+</html>
