@@ -24,7 +24,7 @@
 						return ElementsByClassName(document,vArg.substring(1));
 					default:
 						//对参数的前五个进行判断
-						var str = vArg.substring(0,4);
+						var str = vArg.substring(0,5);
 						if(str == "name="){
 							return document.getElementsByName(vArg.substring(5));
 						}else{
@@ -36,8 +36,9 @@
 			}
 
 			window.onload = function(){
-				alert($("#div1").innerHTML);
-				alert($(".box")[0].innerHTML);
+			//	alert($("#div1").innerHTML);
+			//	alert($(".box")[0].innerHTML);
+				alert($("name=hello")[0].innerHTML);
 			}
 			
 		</script>

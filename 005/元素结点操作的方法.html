@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function(){
+				var oBtn = document.getElementById("btn");
+				var oDiv = document.getElementById("div1");
+				oBtn.onclick = function(){
+					// document.write("<h1>wode</h1>")
+					//会将页面上原有的内容给覆盖掉
+					// var node = document.createElement("span")
+					// var oText = document.createTextNode("文本内容");
+					// oDiv.appendChild(node);
+					// node.appendChild(oText);
+				//	直接创建出一个带文本的结点
+				function createElementWithText(tagName,txt){
+					var node = document.createElement(tagName);
+					var oTxt = document.createTextNode(txt);
+					node.appendChild(oTxt);
+					return node;
+				}
+				var node = createElementWithText("span","woyao");
+				oDiv.appendChild(node);
+				}
+			}
+			//所有通过createElement();
+		</script>
+	</head>
+	<body>
+			<div id="div1">
+				123
+				
+			</div>
+			<input type="button" name="" id="btn" value="点击" />
+	</body>
+</html>

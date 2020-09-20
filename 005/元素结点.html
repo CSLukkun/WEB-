@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript">
+			//属性结点
+			//attributes属性返回该节点的属性结点【对象】
+			//对象特点：1.不重复2.无序
+			window.onload = function(){
+				var oDiv = document.getElementById("div1");
+				alert(oDiv.attributes.length);
+				alert(oDiv.attributes["title"].nodeValue);
+			}
+			/*
+				nodeName   nodeType nodeValue
+					属性名   类型值     值
+			*/
+		</script>
+		<title></title>
+	</head>
+	<body>
+		<div id="div1" title="mizi" name="hello"></div>
+	</body>
+</html>

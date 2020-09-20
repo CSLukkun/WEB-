@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			//set/getAttribue()
+			//removeArrtitudte()
+			window.onload = function(){
+				oDiv = document.getElementById("div1");
+				oDiv.setAttribute("title","kiss");
+			}
+			//注：都是操作当前元素结点中的某个属性
+			//这样做的好处
+			/*
+				上述两种方式的区别
+				<1>class属性的范围区别，点操作是通过操作classname，而getAttribute是通过class
+				2.attribute支持设置用户自定义的属性
+				3.removeAttribue();点操作无法删除，只能置空
+			*/
+		</script>
+	</head>
+	<body>
+		<div id="div1" title="hello" name = "world"></div>
+	</body>
+</html>

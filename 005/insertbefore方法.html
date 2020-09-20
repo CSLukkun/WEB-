@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../004/tool.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			/*
+				insertBefore()
+					格式 父节点。insertBefore(插入的结点，插入到哪个结点之前)；
+			*/
+		   window.onload = function(){
+			   var oApp = document.getElementById("app");
+			   var node = createElementWithText("span","chileni");
+			  // oApp.insertBefore(node,document.getElementsByTagName("br")[0]);//getElementsByTagName返回的是一个数组
+			   
+			   function insertAfter(newNode,oldNode){
+				   var parent = oldNode.parentNode;
+				   if(oldNode == parent.lastChild){
+					   parent.appendChild(newNode);
+				   }
+				   else{
+					   parent.insertBefore(newNode,oldNode.nextElementSibling);
+				   }
+			   }
+			   insertAfter(node,document.getElementsByTagName("br")[0])
+		   }
+		</script>
+	</head>
+	<body>
+		<div id="app">
+			<p>1</p>
+			<br>
+			<em>32</em>
+		</div>
+	</body>
+</html>

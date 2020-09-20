@@ -19,12 +19,12 @@
 				   end = search.length;
 				   var str = search.substring(start,end);//end不包括
 				   //alert(str);
-				   var arr = str.split("=");
+				   var arr = str.split("=");//以等号进行切分
 				   return arr[1];
 			   }
 		   }
 		   var search = "?id=5&&search=ok"
-		   getsearch(search,"id")
+		   alert(getsearch(search,"id"));
 		</script>
 	</head>
 	<body>

@@ -10,8 +10,8 @@
 				//只能找到内嵌式的css样式
 				alert(getComputedStyle(oDiv)["width"]);//获取的是有效的样式
 				//火狐谷歌safari
-				//IE：
-				alert(oDiv.currentStyle("width"))
+				//下面的是IE浏览器获取的方法：
+				alert(oDiv.currentStyle("width"));
 				function getStyle(elem,attr){
 					return elem.currentStyle ? elem.currentStyle[attr] : 
 					getComputedStyle(elem)["width"];//返回的是一个对象

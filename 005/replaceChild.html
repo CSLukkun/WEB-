@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../004/tool.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			/*
+				replaceChild()
+				格式parent.replace(newnode,oldnode);
+				
+				clonenode();
+				格式 node.cloneNode()
+				返回值：新克隆出来的node
+				属性可以克隆，文本不可以
+				参数：默认是flase。如果传true，就会复制文本内容
+				
+				removeChild();
+				parentNode.removeChild()
+			*/
+			   window.onload = function(){
+					// var node = createElementWithText("h1","showshow");
+			    var oP = document.getElementsByTagName("p")[0];
+			  //  oP.parentNode.replaceChild(node,oP.nextElementSibling.nextElementSibling);
+			  var node = oP.cloneNode(true);
+			  oP.parentNode.insertBefore(node,oP.nextElementSibling.nextElementSibling);
+			  oP.parentNode.removeChild(oP);
+			   }
+		</script>
+	</head>
+	<body>		
+	<div id="app">
+			<p>1</p>
+			<br>
+			<em>32</em>
+		</div>
+	</body>
+</html>

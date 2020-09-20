@@ -55,4 +55,30 @@ for(var i =0;i<a.length;i++){
 }
 return a;
 }
+ function rmspaceNode2(parent){
+		   		var nodes = parent.childNodes;
+				for(var i = 0;i < nodes.length;i++){
+					if(nodes[i].nodeType ==3 && nodes[i].nodeType == 3 && /^\s+$/.test(nodes[i].nodeValue))
+					{//删除数组元素倒删的原因：删掉一个数组元素，下一个数组元素会顶上来
+					//解决方法：倒着删，或者删完再检测一个
+						parent.removeChild(nodes[i]);
+					}
+				}
+				return parent
+		   }
+		   function createElementWithText(tagName,txt){
+		   	var node = document.createElement(tagName);
+		   	var oTxt = document.createTextNode(txt);
+		   	node.appendChild(oTxt);
+		   	return node;
+		   }
+  function insertAfter(newNode,oldNode){
+				   var parent = oldNode.parentNode;
+				   if(oldNode == parent.lastChild){
+					   parent.appendChild(newNode);
+				   }
+				   else{
+					   parent.insertBefore(newNode,oldNode.nextElementSibling);
+				   }
+			   }
 				

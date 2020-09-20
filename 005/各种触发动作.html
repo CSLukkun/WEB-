@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function(){
+				var oDiv = document.getElementsByClassName("ppp")[0];
+				oDiv.onclick = function(){
+					console.log(oDiv.innerText);
+				}
+				// oDiv.onmouseover = function(){
+				// 	alert(oDiv.innerText);
+				// }
+				oDiv.onmousedown = function(){
+					console.log("down");
+				}
+				oDiv.onmouseup = function(){
+					console.log("up");
+				}
+				//onsubmit 表单提交动作
+				//
+				// document.getElementsByTagName("form")[0].onsubmit = function(){
+				// 	console.log("wow");
+				// 	return false;
+				// }
+				document.getElementsByTagName("input")[0].onfocus = function(){
+					console.log("focus");
+					return;
+				}
+				document.getElementsByTagName("input")[0].onblur = function(){
+					console.log("blur");
+					return;
+				}
+				document.getElementsByTagName("input")[0].onchange = function(){
+					console.log("change");
+					return;
+					//发生改变并失去焦点是；两个条件
+				}
+				document.getElementsByTagName("input")[0].oninput = function(){
+					console.log("input");
+					return;
+				}
+				
+			}
+			//先执行down在执行up最后执行click
+		</script>
+		<style type="text/css">
+			.ppp{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="ppp">
+			123
+
+		</div>
+		<form action="">
+			<input type="text" name="" id="" value="" />
+			<input type="submit" name="" id="" value="tijao" />
+		</form>
+	</body>
+</html>
