@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// var foo = ()=>{
+			// 	console.log(this)
+			// 	}
+			// foo();//谁调用指向谁
+			// var obj = {
+			// 	"name":"john",
+			// 	"say":function(){
+			// 		console.log(this.name);
+			// 	}
+			// }
+			//this是指向定义是所在作用域，而不是指向是所在的作用域
+			// var obj = {
+			// 	"name":"john",
+			//console.log(this);
+			// 	"say": () => {
+			// 		console.log(this);
+			// 	},
+			// 	//在对象中函数被创建，此时作用域是window
+			// }
+			var obj = {
+				"name":"john",
+				"say":function(){
+					console.log(this)
+					setTimeout(()=>{
+						console.log(this.name)
+					},1000)
+				}
+			}//同一层的{}内的this
+			obj.say();
+		</script>
+	</body>
+</html>

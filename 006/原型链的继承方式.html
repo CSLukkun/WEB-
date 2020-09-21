@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function Person(){
+				
+			}
+			Person.prototype.name = "xiaoR";
+			Person.prototype.age = 18;
+			Person.prototype.sayHello = function(){
+				alert(this.name);
+			}
+			
+			// var p  = new Person();
+			// p.sayHello();
+			//1.创建了一个对象
+			//2._proto_
+			//3.将this指向这个对象
+			//4.执行这个构造函数
+			//5.返回这个对象
+			
+			//当访问一个对象属性的时候，首先对这个对这个对象本身进行查找
+			//如果找到，就只直接返回这个属性，且停止查找
+			//如果没找到，会继续在原型上找，也就是__proto__指向的那个对象来找
+			//这就解释了为什么在构造函数中没有，但是仍旧能访问到属性和方法的原因
+			 function Student(){
+				this.sex ="nan"
+			}
+			Student.prototype.name = "xiaos"
+			Student.prototype.age = 12;
+			Student.prototype.sayhello = function(){
+				alert(this.name);
+			}
+			Student.prototype = Object.create(Person.prototype);
+			Student.prototype.say =function(){
+				alert(1);
+			}
+			var s = new Student();
+			s.say();
+			//不停向上找
+		</script>
+	</body>
+</html>

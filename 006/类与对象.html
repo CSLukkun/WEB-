@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			class Person{
+				constructor(name1) {
+				    this.name=name1;
+				}
+				sayhello(){
+					console.log(this.name);
+				}
+			}
+			var person = new Person("lukun");
+			console.log(person);
+			person.sayhello();
+		</script>
+		<script type="text/javascript">
+			function Person(name,age){
+				this.name = name;
+				this.age = age;
+				// this.sayhello = function(){
+				// 	alert(this.name);
+				//}
+			}
+			Person.prototype.sayhello = function(){
+				alert(this.name);
+			}
+			//1.为我们创建了一个对象
+			//2.this指针指向了这个对象
+			//3.执行构造函数内的代码
+			//4.将构造函数返回
+			var p = new Person();
+			function Student(name,age,id){
+				// this.name = name;
+				// this.age = age;
+				// this.id = id;
+				// this.sayhello = function(){
+				// 	alert(this.name);
+				// }
+				Person.apply(this,[name,age]);
+				Person.call(this,name,age);
+				//构造函数的继承
+				this.study = function(){
+					alert(this.id + 'is learning!!!')
+				}
+			}
+			
+			//继承
+			//apply和call 改变this指向
+			var p2 = {name:"xiao2"};
+			Person.apply(p2);此时指针指向p2
+			 
+		</script>
+	</body>
+</html>

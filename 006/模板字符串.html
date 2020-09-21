@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<ul id = "test">
+			
+		</ul>
+		<script type="text/javascript">
+			// //ES5
+			// var onj = {"name":"john","age":20}
+			// var name = obj.name;
+			// var age = obj.age;
+			// console.log("姓名是"+ name +"年龄是" + age);
+			//ES6
+			// let obj = {"name":"john","age":20};
+			// let {name,age} = obj;
+			// // console.log(`${name}的年龄是${age}`);//反引号，大括号，dollar符
+			
+			
+			 var arr = [0,1,2,3,4];
+			 let oUl = document.getElementById("test");
+			 var html = ""
+			// for(var i in arr){
+			// 	html +="<li>"+ arr[i]+"</li>" 
+			// }
+			for(var i in arr){
+				 html += `<li>${arr[i]}</li>`;//不用使用拼接符了，可以省略很多
+			}
+			oUl.innerHTML = html;
+		</script>
+	</body>
+</html>

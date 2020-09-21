@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function Person(name,age){
+				this.name = name;
+				this.age = age;
+			}
+			Person.prototype.sayHello = function(){
+				alert(this.name);
+			}
+			//把属性放在构造函数中，把方法放在原型上
+			function Student(name,age,id){
+				Person.apply(this,[name,age]);//继承了Person的name和age属性
+				this.id =id;
+				
+			}
+			Student.prototype = Object.create(Person.prototype);//继承了Person类的sayhello
+			Student.prototype.study = function(){
+				alert(this.name)
+			}
+	
+		</script>
+	</body>
+</html>

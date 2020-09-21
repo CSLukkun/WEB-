@@ -39,11 +39,11 @@
 			// var str = "abc tmd abc TMD";
 			// console.log(str.replace(reg,"***"));
 			// //exec是正则表达式的方法，若找到了匹配的文本，则返回一个结果数组，否则返回null
-			var str ="good 1 good";
-			var reg=/good/g;
+			var str ="good 1 goood";
+			var reg=/go+d/g;
 			console.log(reg.exec(str));
 			console.log(reg.exec(str));
-			console.log(reg.exec(str));
+			//console.log(reg.exec(str));
 			/*
 			但是，当 RegExpObject 是一个全局正则表达式时，exec() 的行为就稍微复杂一些。它会在 RegExpObject 的 lastInde
 			x 属性指定的字符处开始检索字符串 string。当 exec() 找到了与表达式相匹配的文本时，在匹配后，它将把 RegExpObject 的 lastIndex 属性

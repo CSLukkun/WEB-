@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// function* foo(x){
+			// 	yield x+1;
+			// 	yield x+2;
+			// 	return x+3;
+			// }
+			// var f = foo(1);
+			// console.log(f.next(),f.next(),f.next());//done变成true了
+			
+			
+			
+			// function* foo(x){
+			// 	var y = 2*(yield(x+1));
+			// 	var z = yield(y/3);
+			// 	return y+z+x;
+			// }
+			// var it = foo(5);
+			// console.log(it.next(3));//next()方法参数表示上一次的返回值；表示一个yield
+			// console.log(it.next(12));//标注的上一次的返回值的结果
+			// console.log(it.next(13));
+			//x=5,y=24,z=13
+			//斐波那契数列
+			function* feibo(n){
+				let a =0;
+				let b =1;
+				for(let i =0 ;i<n;i++){
+					yield a;//运行到次，返回一个值
+					let temp = a+b;
+					a = b;
+					b = temp;
+				}
+				//console.log(temp);
+			}
+			var f = feibo(10);
+			for(let i of f){
+				console.log(i);
+			}
+		</script>
+	</body>
+</html>
