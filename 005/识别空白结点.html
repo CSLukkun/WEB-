@@ -26,8 +26,8 @@
 		   }
 		   function rmspaceNode2(parent){
 		   		var nodes = parent.childNodes;
-				for(var i = 0;i < nodes.length;i++){
-					if(nodes[i].nodeType ==3 && nodes[i].nodeType == 3 && /^\s+$/.test(nodes[i].nodeValue))
+				for(var i = nodes.length;i >= 0;i--){
+					if(nodes[i].nodeType ==3 && /^\s+$/.test(nodes[i].nodeValue))
 					{//删除数组元素倒删的原因：删掉一个数组元素，下一个数组元素会顶上来
 					//解决方法：倒着删，或者删完再检测一个
 						parent.removeChild(nodes[i]);
