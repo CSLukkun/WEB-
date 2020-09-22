@@ -14,7 +14,7 @@
 			// console.log(reg.test("google"));
 			// console.log("goggle ggggle".match(reg));
 			// //从0个n开始找，最先找到就匹配
-			// //+最少有一次重复匹配
+			// //n+最少有一次重复匹配
 			// //n？表示0或1个n的字符串
 			// //[]表示可以出现的范围[0-9]
 			// var reg = /[0-9]/gi;
@@ -38,7 +38,7 @@
 								//使用RegExp.$xx来使用捕获到的分组内容
 			console.log(RegExp.$1);
 			// | 或
-			var reg = /google|yahoo|tecent/
+			var reg = /(google)|(yahoo)|(tecent)/
 			
 			// ()分组，作为一个整体
 			var reg = /(google){4,6}/gi;

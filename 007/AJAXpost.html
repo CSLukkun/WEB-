@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+			var xhr = new XMLHttpRequest();//创建对象
+			xhr.open('post','login.php',true);//配置对象
+			xhr.setRequestHeader('Content-Type','application/x-www-form-urlencode');
+			//设定请求头，指定body中的数据是什么格式
+			xhr.send('user=gap&password=123456');
+			//发送请求
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState !=4){
+					return ;
+				}
+				else{
+					if(xhr.status>=200 && xhr.status<=300){
+						var resp = JSON.parse(XHR.responseText);
+						if(resp.result){
+							alert('登录成功')
+						}else{
+							alert('登录失败')
+						}
+					}
+				}
+			}
+			
+		</script>
+	</body>
+</html>

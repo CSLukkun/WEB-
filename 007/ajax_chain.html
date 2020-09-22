@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="./jquery.js">
+		</script>
+	</head>
+	<body>
+		<p>
+			
+		</p>
+		<script type="text/javascript">
+			var article = '' ;
+			//取文章
+			$.get('./file/p1.txt',function(p1){
+				article += p1;
+				$.get('./file/p2.txt',function(p2){
+					article +=p2;
+					$.get('./file/p3.txt',function(p3){
+						article +=p3;
+						$('p').html(article);
+					})
+				})
+			})//ajax的调用引起了回调地狱
+			
+		</script>
+	</body>
+</html>

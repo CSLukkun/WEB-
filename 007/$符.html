@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			</ul>
+			<input type="text" name="" id="" value="" />
+	</body>
+	<script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$('li').html('li');//对应原生结点innerHTML，设定和取得innerhtml的
+		$('input').keyup(function (){
+			alert($(this).val());
+			var v = $(this).val();
+			if(v.slice(-2)!='px'){
+			$(this).val(v+'px');
+			}
+		})
+	</script>
+</html>

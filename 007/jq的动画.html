@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<button type="button">xianshi</button>
+		<button type="button">yingcang</button>
+		<button type="button">tingzhi</button>
+		<div>
+			
+		</div>
+		<script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('button:first').click(function(){
+				//$('div').show(3000);
+				//$('div').fadeIn(3000);
+				//$('div').slideDown(3000);
+				$('div').animate({
+					width:500,
+					
+				},5000).animate({
+					height:200
+				},5000);
+			})//动画队列实现同步
+			$('button:eq(1)').click(function(){
+				//$('div').hide(2000);
+				//$('div').fadeOut(3000);//透明度
+				//$('div').slideUp(3000);//拉窗帘
+				//$('div').slideDown(3000);
+				$('div').animate({
+						width:600,
+						height:600
+					});
+				})
+				
+			$('button:last').click(function(){
+				$('div').stop(false);//默认为true
+			})
+			
+			
+		</script>
+	</body>
+</html>

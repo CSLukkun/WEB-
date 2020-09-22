@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			//AJax的核心对象：XMLHttpRequest
+			//GET 取得数据 数据在url中国
+			//POST 发送数据 数据在请求体中
+		</script>
+	</head>
+	<body>
+			<h1>
+				
+				
+				
+			</h1>
+			<script type="text/javascript">
+				// 1.创建AJax对象
+				// 2.打开这个对象
+				// 3.发送请求
+				// 4.监听请求
+				var xhr = new XMLHttpRequest();
+				xhr.open('get','test.txt',true);//true规定异步还是同步
+				
+				
+				
+				xhr.send();
+				
+				xhr.onreadystatechange = function(){
+					//xhr对象的readystate属性发生改变，这个时间就会触发
+					//readystate=0,xhr对象已经创建，但还没有进行初始化的操作
+					//=1，已经调用了open
+					//=2已经调用了send
+					//=3已经返回了部分数据
+					//=4数据已经全部返回了
+					
+					
+					if(xhr.readyState != 4){
+						return;
+					}
+					if(xhr.status >= 200 && xhr.status<=300){
+						//数据放在了xhr.responseText的属性(string)
+						document.querySelector("h1").innerText = xhr.responseText;
+					}
+					else{
+						document.querySelector("h1".inner) = "flase";
+					}
+				}
+			</script>
+	</body>
+</html>

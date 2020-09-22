@@ -1,0 +1,2 @@
+this is a test.
+if ajax request is successful you can see the content.

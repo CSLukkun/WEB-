@@ -29,6 +29,8 @@
 			function rmCookie(name){
 				setCookie(name,1,-1);
 			}
+			//以上为封装的三个函数
+			
 			var oInput = document.getElementsByTagName("input");
 			if(getCookie("username")){
 				oInput[0].value=getCookie("username");
@@ -43,6 +45,7 @@
 					setCookie("password",password,7);
 				}
 			}
+			//仅仅实现了将用户名和密码存到了cookie上
 		</script>
 	</body>
 </html>

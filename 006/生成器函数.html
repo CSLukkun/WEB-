@@ -39,9 +39,12 @@
 				//console.log(temp);
 			}
 			var f = feibo(10);
-			for(let i of f){
-				console.log(i);
+			for(let iterator of f){
+				console.log(iterator);
 			}
+			//ES6 新引入了 Generator 函数，可以通过 yield 关键字，把函
+			//数的执行流挂起，为改变执行流程提供了可能，从而为异步编程提供解决方案。
+			//我的理解就是可以取得函数运行中的某些值
 		</script>
 	</body>
 </html>
