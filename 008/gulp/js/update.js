@@ -1,0 +1,1 @@
+document.getElementsByTagName("sad").innerHTML = '1123';

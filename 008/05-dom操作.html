@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+		<button type="button">shanchu</button>
+		<script src="../007/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var $el = $('<div><h1>1233</h1></div>');
+			var $ele = $('<div><h1>123</h1></div>');
+			$('body').append($el);
+			$ele.appendTo('body');
+			$ele.prependTo('ul')
+			$('ul').prepend($ele);
+			$('li:eq(2)').after('<li>3.5</li>');
+			$('button').click(function(){
+				//$('li:last').remove()
+				$('li:last').empty();//内容被删除了
+			})
+		</script>
+	</body>
+</html>

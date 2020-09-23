@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function Factory(){
+				
+			}
+			Factory.create = function (type){//表示这个函数所有拥有的方法
+				switch(type){
+					case 'normal':
+						return new Normal();
+						break;
+					case 'guncarrier':
+						return new GunCarrier();
+						break;
+					case 'strong':
+						return new Strong();
+							break;
+					default:
+						return;
+				}
+			}
+			
+			function Normal(){
+				console.log('Normal is created');
+			}
+			function GunCarrier(){
+				console.log('GunCarrier is created')
+			}
+			function Strong(){
+				console.log('Strong is created')
+			}
+		</script>
+		<script type="text/javascript">
+				var s1 = Factory.create('normal');
+				for(var i = 0;i<100;i++){
+					Factory.create('guncarrier');
+				}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

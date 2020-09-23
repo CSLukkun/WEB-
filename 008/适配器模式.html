@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function Sagittarius(){
+				
+			}
+			Sagittarius.prototype.skill_one = function(){
+				console.log('-----技能1')
+			}
+			Sagittarius.prototype.skill_two = function(){
+				console.log('-----技能2')
+			}
+			Sagittarius.prototype.skill_three = function(){
+				console.log('-----技能3')
+			}
+			Sagittarius.prototype.skill_four = function(){
+				console.log('-----技能4')
+			}
+			
+			function GuanYu(){
+				
+				this.s = new Sagittarius();
+			}
+			GuanYu.prototype.skill_1 = function(){
+				this.s.skill_one();
+			}
+			GuanYu.prototype.skill_2 = function(){
+				this.s.skill_two();
+			}
+			GuanYu.prototype.skill_3 = function(){
+				this.s.skill_three();
+			}
+			
+			var gy = new GuanYu();
+			gy.skill_1()
+			gy.skill_2()
+			gy.skill_3()
+			//旧系统和新系统不一致的时候
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
