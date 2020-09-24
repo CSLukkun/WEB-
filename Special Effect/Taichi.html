@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding: 0;
+       
+    }
+    .circlebox{
+        width: 300px;
+        height: 300px;
+        border: 1px solid red;
+        margin: 100px;
+        position: relative;
+        animation: move 3s infinite linear;
+    }
+    .circleblack{
+        width: 300px;
+        height: 300px;
+        background: black;
+        border-radius: 50%;
+    }
+    .semicircle{
+        width: 150px;
+        height: 300px;
+        background-color: white;
+        border-top-right-radius:150px;
+        border-bottom-right-radius:150px;
+        position: absolute;
+        top: 0;
+        left:150px;
+    }
+    .circlebb{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        position: absolute;
+        top:0px;
+        left:75px;
+        background-color: black;
+
+    }
+    .circleww{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        position: absolute;
+        top:150px;
+        left:75px;
+        background-color: white;
+    }
+    .circleminb{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: absolute;
+        top:200px;
+        left:125px;
+        background-color: black;
+    }
+    .circleminw{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: absolute;
+        top:50px;
+        left:125px;
+        background-color: white;
+    }
+    @keyframes move{
+        0%{transform: rotate(0deg);}
+        100%{transform: rotate(360deg);}
+        
+    }
+</style>
+<body>
+    <div class="circlebox">
+        <div class="circleblack"></div>
+        <div class='semicircle'></div>
+        <div class='circlebb'></div>
+        <div class="circleww"></div>
+        <div class='circleminb'></div>
+        <div class="circleminw"></div>
+    </div>
+</body>
+</html>

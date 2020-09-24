@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class='{infoClass}'>
+        E-mail:{mail},密码:{pswd}
+    </div>
+    <form action="./login" method="post" class="{formClass}">
+        <label for="mail">
+            E-mail: <input type="text" name="mail" id="">
+        </label>
+        <label for="pswd">
+            password: <input type="password" name="pswd" id="">
+        </label>
+        <label for="submit">
+            <input type="submit" value="提交"/>
+        </label>
+    </form>
+</body>
+</html>

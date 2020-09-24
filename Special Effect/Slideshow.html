@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .listbox{
+            width: 500px;
+            height: 375px;
+            border: 1px solid #333333;
+            margin:100px ;
+            position: relative;
+        }
+        .listpic{
+            width: 500px;
+            height: 375px;
+            overflow: hidden;
+        }
+        .listbox ul{
+            position: absolute;
+            right: 20px;
+            bottom: 30px;
+        }
+        .listbox ul li{
+            width:30px;
+            height: 30px;
+            background:grey;
+            float: left;
+            list-style: none;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+            margin:1px 2px;
+        }
+        .listbox ul li a{
+            color: white;
+            text-decoration: none;
+        }
+        .listbox ul li:hover{
+            background:rgba(0,0,0,0.8) ;
+        }
+    </style>
+</head>
+<body>
+    <div class="listbox">
+        <div class='listpic'>
+            <img src="./images/1.png" alt=""id='pic1'>
+            <img src="./images/2.png" alt=""id='pic2'>
+            <img src="./images/3.png" alt=""id='pic3'>
+            <img src="./images/4.png" alt=""id='pic4'>
+        </div>
+        <ul>
+            <li><a href="#pic1">1</a></li>
+            <li><a href="#pic2">2</a></li>
+            <li><a href="#pic3">3</a></li>
+            <li><a href="#pic4">4</a></li>
+        </ul>
+    </div>
+</body>
+</html>
