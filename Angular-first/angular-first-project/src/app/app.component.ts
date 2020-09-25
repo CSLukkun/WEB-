@@ -5,7 +5,13 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  title = 'my-first-angular-app1';
-  name  = '';
+  title = 'angular-first-project';
+  loadedFeature = 'recipe'
+
+  onNavigate(feature:string){
+    console.log(123)
+    this.loadedFeature = feature
+  }
 }

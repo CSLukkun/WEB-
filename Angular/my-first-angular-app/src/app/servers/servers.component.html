@@ -1,0 +1,13 @@
+<p>servers works!</p>
+<button [disabled]='allowNewServer' class="btn" >求你按我</button>
+<button class="btn" (click)='onCreateServer()'>创建服务</button>
+<!-- <app-server></app-server> -->
+<app-server></app-server>
+
+<input type="text"  [(ngModel)] = "serveName"/>
+<!-- <input type="text" (keyup)='onUpdataServeName($event)'/> -->
+
+{{serverCreationStatus}}
+<p *ngIf = 'serveCreated;else noServe'>服务已经创建，服务名称是{{serveName}}</p>
+<ng-template #noServe><p>服务没有创建</p></ng-template>
+<app-server *ngFor="let server of servers;let i = index" [ngStyle]="{color:i>=4?'blue':'yellow' }"></app-server>
