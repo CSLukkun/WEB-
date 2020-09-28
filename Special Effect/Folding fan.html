@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            
+        }
+        .box{
+            width: 600px;
+            height:650px ;
+            border-bottom: 2px solid black;
+            margin: 50px auto;
+            position: relative;
+        }
+        .box div{
+            height: 600px;
+            width: 200px;
+            position: absolute;
+            left: 200px;
+            box-shadow: 3px 3px 5px #333;
+            transform-origin:center bottom ;
+            transition: all 1s linear;
+            
+        }
+        .box div:nth-of-type(1){
+            background-color: yellow;
+           
+        }
+        .box div:nth-of-type(2){
+            background-color: green;
+            opacity: 0;
+        }
+        .box div:nth-of-type(3){
+            background-color: pink;
+            opacity: 0;
+        }
+        .box div:nth-of-type(4){
+            background-color: gray;
+            opacity: 0;
+        }
+        .box div:nth-of-type(5){
+            background-color: blue;
+            opacity: 0;
+        }
+        .box div:nth-of-type(6){
+            background-color: black;
+            opacity: 0;
+        }
+        .box div:nth-of-type(7){
+            background-color: red;
+            opacity: 0;
+        }
+        .box div:nth-of-type(8){
+            background-color: red;
+            opacity: 0;
+        }
+        .box div:nth-of-type(9){
+            background-color: black;
+            opacity: 0;
+        }
+        .box div:nth-of-type(10){
+            background-color: blue;
+            opacity: 0;
+        }
+        .box div:nth-of-type(11){
+            background-color: gray;
+            opacity: 0;
+        }
+        .box div:nth-of-type(12){
+            background-color: pink;
+            opacity: 0;
+        }
+        .box div:nth-of-type(13){
+            background-color: green;
+            opacity: 0;
+        }
+        .box div:nth-of-type(14){
+            background-color: yellow;
+            opacity: 0;
+        }
+        .box:hover div:nth-of-type(2){transform: rotate(15deg);opacity: 1;}
+        .box:hover div:nth-of-type(3){transform: rotate(30deg);opacity: 1;}
+        .box:hover div:nth-of-type(4){transform: rotate(45deg);opacity: 1;}
+        .box:hover div:nth-of-type(5){transform: rotate(60deg);opacity: 1;}
+        .box:hover div:nth-of-type(6){transform: rotate(75deg);opacity: 1;}
+        .box:hover div:nth-of-type(7){transform: rotate(90deg);opacity: 1;}
+        .box:hover div:nth-of-type(8){transform: rotate(-90deg);opacity: 1;}
+        .box:hover div:nth-of-type(9){transform: rotate(-75deg);opacity: 1;}
+        .box:hover div:nth-of-type(10){transform: rotate(-60deg);opacity: 1;}
+        .box:hover div:nth-of-type(11){transform: rotate(-45deg);opacity: 1;}
+        .box:hover div:nth-of-type(12){transform: rotate(-30deg);opacity: 1;}
+        .box:hover div:nth-of-type(14){transform: rotate(-15deg);opacity: 1;}
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>7</div>
+    <div>6</div>
+    <div>5</div>
+    <div>4</div>
+    <div>3</div>
+    <div>2</div>
+    <div>1</div>
+</div>
+</body>
+</html>

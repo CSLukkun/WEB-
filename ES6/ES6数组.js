@@ -17,3 +17,6 @@ let arr = Array.from({
   });
   console.log(); // ['1', '2', 3]
   //类数组对象，必须要含有length属性，且元素的属性名必须是数值
+  let arr = Array.of(1,2,3,4)
+  console.log([1, [2, [3, [4, 5]]]].flat(2)); // [1, 2, 3, [4, 5]]
+  //嵌套数组转换成1维数组

@@ -8,15 +8,18 @@
 				height: 100px;
 				width: 100px;
 				background-color: green;
-				float: left;
 			}
 			#red{
 				width: 200px;
 				height: 9.375rem;
 				background-color: red;
+				float: left;
+
 			}
+			/* 浮动不会影响到上层元素，也就是说只有文档流下面的会移动 */
+			/* 上一个元素浮动，下一个才会挤上去 */
 			.a{
-				width: 200px;height: 200px;background-color: #008000;
+				width: 200px;height: 100px;background-color: #008000;
 				
 			}
 			.b{

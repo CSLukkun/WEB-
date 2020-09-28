@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            display: flex;
+            width: 80%;
+            margin: 10px auto;
+            background-color: brown;
+            height: 600px;
+        }
+        .left{
+            width: 200px;
+            background-color: burlywood;
+            height: 600px;
+        }
+        .right{
+            flex: 1;
+            /* flex=1自动铺满整个页面 */
+            background-color: cornsilk;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="left">
+hi
+        </div>
+        <div class="right">
+hello
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .listbox{
+            width: 500px;
+            height: 300px;
+           
+            margin: 100px auto;
+        }
+        .listbox .list a{
+            display: block;
+            height: 35px;
+            background: linear-gradient(#cecece,#8f8f8f);
+            border-radius:5px;
+            padding-left:12px;
+            text-decoration: none;
+            color:#424242;
+            line-height: 35px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        .listbox .list{
+            position: relative;
+        }
+        .listbox .list p {
+            height: 0px;
+            overflow:auto;
+            margin-left:10px;
+            transition: 1s linear;
+        }
+         .list:target p{
+            height:100px;
+        }
+
+        .listbox .list span{
+            width: 0;
+            height: 0;
+            border-left:5px solid rgba(0,0,0,0);
+             border-bottom:5px solid transparent;
+            border-top:5px solid yellow ;
+            border-right:5px solid transparent;
+            top:15px;
+            right: 15px;
+            position: absolute;
+
+
+        }
+        .list:target span{
+            border-left:5px solid red;
+            border-bottom:5px solid transparent;
+            border-top:5px solid transparent ;
+            border-right:5px solid transparent;
+            padding-right: -3px;
+        }
+        /* 锚点要在最后定义 */
+        .listbox .list a:hover{
+            background: linear-gradient(#6bb2ff,#2288dd);
+        }
+
+    </style>
+</head>
+<body>
+    <div class = 'listbox'>
+       <div class="list" id="one">
+            <a href="#one">Brand</a>
+            <span></span>
+            <p>个人观点:iOS开发这个职业,不是别人说完就完的,那些说完了的人都是因为技术菜,没有权威性,不想想自己为什么菜,为什么没有和唐巧王巍在一个高度,因为菜.
+还没有到达一个高度就轻易否定一个职业,注定被这个职业淘汰.
+所以,无视掉这种人这么荒谬的观点,那些真正有技术,懂得学习的iOS高级开发工程师,现在正在各大企业(腾讯百度阿里等),一句话,不要有比上不足比下有余的态度.努力学习.
+真正会学习的人,不会说iOS完了,而是想着如何提升自己,你想想,真正牛逼的人,真的只会iOS开发这一种吗?
+</p>
+       </div>
+       <div class="list" id="two">
+        <a href="#two">Brand2</a>
+        <span></span>
+        <p>个人观点:iOS开发这个职业,不是别人说完就完的,那些说完了的人都是因为技术菜,没有权威性,不想想自己为什么菜,为什么没有和唐巧王巍在一个高度,因为菜.
+还没有到达一个高度就轻易否定一个职业,注定被这个职业淘汰.
+所以,无视掉这种人这么荒谬的观点,那些真正有技术,懂得学习的iOS高级开发工程师,现在正在各大企业(腾讯百度阿里等),一句话,不要有比上不足比下有余的态度.努力学习.
+真正会学习的人,不会说iOS完了,而是想着如何提升自己,你想想,真正牛逼的人,真的只会iOS开发这一种吗?
+</p>
+   </div>
+   <div class="list" id="three">
+    <a href="#three">Brand3</a>
+    <span></span>
+    <p>个人观点:iOS开发这个职业,不是别人说完就完的,那些说完了的人都是因为技术菜,没有权威性,不想想自己为什么菜,为什么没有和唐巧王巍在一个高度,因为菜.
+还没有到达一个高度就轻易否定一个职业,注定被这个职业淘汰.
+所以,无视掉这种人这么荒谬的观点,那些真正有技术,懂得学习的iOS高级开发工程师,现在正在各大企业(腾讯百度阿里等),一句话,不要有比上不足比下有余的态度.努力学习.
+真正会学习的人,不会说iOS完了,而是想着如何提升自己,你想想,真正牛逼的人,真的只会iOS开发这一种吗?
+</p>
+</div>
+    </div>
+</body>
+</html>
+<!-- 1.锚点：css实现点击效果变样式就用锚点 单页面进行跳转的时候
+2.定位
+3.边框写三角形 
+4.当前活动窗口的控制：:target
+-->

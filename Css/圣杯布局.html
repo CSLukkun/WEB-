@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.container{
+    position: relative;
+    height: 300px;
+    background-color: #ddd;
+    padding: 0 300px 0;
+}
+.container .middle{
+    float: left;
+    width: 100%;
+    height: 300px;
+    background-color: crimson;
+}
+.container .left{
+    float: left;
+    position: relative;
+    height: 300px;
+    width: 300px;
+    margin-left: -100%;
+    left:-300px;
+    background-color:black
+}
+.container .right{
+    float: left;
+    position: relative;
+    height: 300px;
+    width: 300px;
+    margin-left: -300px;
+    left:300px;
+    background-color: blanchedalmond
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="middle"></div>
+        <!-- 预先加载 -->
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>

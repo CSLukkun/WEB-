@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            width: 80%;
+            margin: 50px auto;
+            height: 800px;
+            border: 2px solid red;
+            box-sizing: border-box;
+            font-size: 0;
+            /* border-box:对元素的指定宽度和高度包括了padding和border */
+            /* 只是内容部分变小了，因为将padding和border包含在内了 */            
+        }
+        .left{
+            display: inline-block;
+            width: 200px;
+            background: brown;
+            height: 800px;
+            vertical-align:top;
+        }
+        .right1{
+            display:inline-block;
+            width:calc(100% - 200px);
+            height:800px;
+            background:black;
+            vertical-align:top;
+            /* 防止高度不对齐 */
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="left">
+            HI
+        </div>
+        <div class="right1">
+            hello
+        </div>
+    </div>
+</body>
+</html>
