@@ -34,6 +34,7 @@
         .listbox .list p {
             height: 0px;
             overflow:auto;
+            /* 超出盒子的元素用滑动栏实现 */
             margin-left:10px;
             transition: 1s linear;
         }
@@ -42,16 +43,14 @@
         }
 
         .listbox .list span{
-            width: 0;
-            height: 0;
             border-left:5px solid rgba(0,0,0,0);
-             border-bottom:5px solid transparent;
+            border-bottom:5px solid transparent;
             border-top:5px solid yellow ;
             border-right:5px solid transparent;
             top:15px;
             right: 15px;
             position: absolute;
-
+            /* 如何利用span画出一个三角形 */
 
         }
         .list:target span{
@@ -60,10 +59,12 @@
             border-top:5px solid transparent ;
             border-right:5px solid transparent;
             padding-right: -3px;
+            
         }
         /* 锚点要在最后定义 */
         .listbox .list a:hover{
             background: linear-gradient(#6bb2ff,#2288dd);
+            /* 代表背景颜色随时间变换而变化 */
         }
 
     </style>
@@ -101,7 +102,7 @@
 </body>
 </html>
 <!-- 1.锚点：css实现点击效果变样式就用锚点 单页面进行跳转的时候
-2.定位
+2.定位 锚点定位 要给父元素的id，a的锚点，以及为类target
 3.边框写三角形 
 4.当前活动窗口的控制：:target
 -->
