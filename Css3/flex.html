@@ -1,0 +1,99 @@
+！<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        color: #666;
+    }
+
+    main {
+        flex: 1;
+    }
+
+    footer {
+        height: 50px;
+        background: blueviolet;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    footer section {
+        display: flex;
+        flex: 1 0;
+        flex-direction: column-reverse;
+        border-right: solid 1px #555;
+        border-top: solid 1px #555;
+    }
+
+    footer section:last-child {
+        border-right: none;
+    }
+
+    footer section h4 {
+        flex: 0 0 50px;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+        color: white;
+    }
+
+    footer section ul {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        border: solid 1px #555;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        margin: 5px;
+    }
+
+    footer section ul li {
+        flex: 1 0 50px;
+        border-bottom: solid 1px #555;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    footer section ul li:last-child {
+        border: none;
+    }
+    footer section ul li:hover{
+        background-color: cornflowerblue;
+    }
+</style>
+</head>
+<body>
+    <main></main>
+    <footer>
+        <section>
+            <h4>教程</h4>
+            <ul>
+                <li>计算机网络</li>
+                <li>webpack</li>
+                <li>javascript</li>
+                <li>ES6</li>
+                <li>Angular</li>
+            </ul>
+            
+        </section>
+        <section>
+            <h4>直播</h4>
+        </section>
+    </footer>
+</body>
+</html>

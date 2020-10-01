@@ -19,7 +19,7 @@
 				}
 				else{
 					if(xhr.status>=200 && xhr.status<=300){
-						var resp = JSON.parse(XHR.responseText);
+						var resp = JSON.parse(xhr.responseText);
 						if(resp.result){
 							alert('登录成功')
 						}else{
