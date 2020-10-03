@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Hero } from './hero';
-import { Heroes } from './mock-heroes';
+
 import {Observable,of} from 'rxjs'
 import { MessagesService } from './messages.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -46,7 +46,8 @@ private log(message: string) {
   this.messageService.add(`HeroService: ${message}`);
 
 }
-private heroesUrl = 'api/heroes';  // URL to web api
+
+private heroesUrl = '.api/heroes';  // URL to web api
 /** PUT: update the hero on the server */
 updateHero(hero: Hero): Observable<any> {
   return this.http.put(this.heroesUrl, hero, this.httpOptions).pipe(

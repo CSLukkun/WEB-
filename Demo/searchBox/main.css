@@ -1,0 +1,40 @@
+html,body{
+    height:100%;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+.autocomplete{
+    position: relative;
+    display: inline-block;
+    margin: 20xp;
+    left: 50%;
+    top: 50%;
+}
+.input{
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 0;
+    line-height: 24px;
+    font-size: 16px;
+    height: 24px;
+}
+.input:focus{
+    outline: none;
+    border-bottom-color:blue ;
+}
+.suggest{
+    width: 200px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow:0 2px 4px rgba(0,0,0,0.2);
+}
+.suggest li{
+    cursor: pointer;
+    padding: 5px;
+}
+.suggest li:hover{
+    background-color: lightblue;
+}

@@ -20,12 +20,14 @@ import { HeroSearchComponent }  from './hero-search/hero-search.component';
     MessagesComponent,
     DashboardComponent,
     HeroSearchComponent,
+    // 声明该模块下的组件
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    // 这里面都是模块
     
     
 
