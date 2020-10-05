@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        .container{
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        div.center{
+            text-align: left;
+            opacity: 0;
+        }
+        /* 用于解决居中文本左对齐 */
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="center">
+            <p>Html5与Css3：使用过部分标签，完成过部分特效的显示。</p>
+            <p>Java script：掌握到ES6的基本内容，算是入门水平</p>
+            <p>Git：拥有自己仓库，且与同学合作过简单的项目</p>
+            <p>Angular：参考官网教程，能够理解并完成Hero of Tour</p>
+            <p>Rxjs：了解Rxjs的主要内容：Observable，Observer，Operator，Subject</p>
+            <p>计算机基础知识在本科阶段基本掌握</p>
+            <p>其他能力：基本能够流畅阅读英文文档，通过网络搜索到对自己有帮助的信息</p>
+        </div>
+    </div>
+</body>
+    <script>
+        
+            var obp = document.getElementsByClassName('center');
+            var now = Number(obp[0].style.opacity);
+            var mov = setInterval(
+                function(){
+                    now +=0.05;
+                    console.log(now);
+                    obp[0].style.opacity = now;
+                    if(now>1){
+                        clearInterval(mov);
+                    }
+                }
+                ,200
+            )   
+                // setInterval(function(){
+                //     console.log(obp[i].style.opacity)
+                // },50
+                // )
+            
+        
+        
+
+    </script>
+</html>

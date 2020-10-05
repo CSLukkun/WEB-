@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "bootstrap": "^4.5.2",
     "jquery": "^3.5.1",
     "zepto": "^1.2.0"
   },

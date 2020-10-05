@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        padding-left: 200px;
+        padding-top: 200px;
+    }
+
+    article {
+        width: 600px;
+        height: 600px;
+        display: grid;
+        grid-template-rows: repeat(3, 200px);
+        grid-template-columns: repeat(3, 200px);
+        border: solid 5px silver;
+        grid-auto-flow: row dense;
+    }
+
+    div {
+        background: blueviolet;
+        background-clip: content-box;
+        padding: 10px;
+        font-size: 35px;
+        color: white;
+    }
+
+    article div:nth-child(1) {
+        grid-column: 1/span 2;
+        background: #000;
+    }
+
+    article div:nth-child(2) {
+        grid-column: 2/span 1;
+    }
+    </style>
+</head>
+<body>
+    <article>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </article>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+    }
+
+    article {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: repeat(3, 33.3%);
+        grid-template-columns: repeat(3, 33.3%);
+        grid-template-areas: "top te te"
+            "top te te"
+            "bottom bottom bottom";
+    }
+
+    .top {
+        background: blueviolet;
+        grid-area: top;
+        font-size: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+    .bottom {
+        background: orange;
+        grid-area: bottom;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 35px;
+    }
+    .zhanweifu{
+        grid-area: 1/2/3/4;
+        background-color:brown;
+    }
+    </style>
+</head>
+<body>
+    <article>
+        <div class="top">
+            houdunren.com
+        </div>
+        <div class="bottom">
+            后盾人
+        </div>
+        <div class="zhanweifu">
+
+        </div>
+    </article>
+</body>
+</html>

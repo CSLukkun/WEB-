@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+        }
+        .one{
+            width: 100%;
+            height: 50px;
+            background-color: blanchedalmond;
+        }
+        .two{
+            width: 100%;
+            height: 50px;
+            background-color: blue;
+        }
+    </style>
+ 
+</head>
+<body>
+    <div class="container">
+        <div class="one" onclick="up(this)"></div>
+        <div class="two" onclick='up(this)'></div>
+    </div>
+    <script>
+        function up(el){
+            el.style.order = el.style.order*1-1;
+        }
+    </script>
+</body>
+</html>
