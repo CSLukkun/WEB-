@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+         * {
+        padding: 0;
+        margin: 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+    body {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    main {
+        position: relative;
+        background: #f3f3f3;
+        flex: 1;
+        overflow: hidden;
+    }
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 8vh;
+        text-align: center;
+        background: #34495e;
+        flex: 1;
+
+    }
+    nav a {
+        flex: 1;
+        font-size: 1.3em;
+        text-transform: uppercase;
+        font-weight: bold;
+        opacity: 0.8;
+        color: white;
+    }
+    nav a:nth-child(2) {
+        border-right: solid 1px #aaa;
+        border-left: solid 1px #aaa;
+    }
+    main>div {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transition: all 1s;
+        /* 设置了背景图片移动的效果 */
+        z-index: 1;
+        background: #f3f3f3;
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translate(0, -100%);
+        color: white;
+        font-size: 2em;
+    }
+    main>div:target {
+        opacity: 1;
+        transform: translate(0%, 0%);
+    }
+
+    main>div:nth-of-type(1):target {
+        background: #3498db;
+    }
+
+    main>div:nth-of-type(2):target {
+        background: #9b59b6;
+    }
+
+    main>div:nth-of-type(3):target {
+        background: #16a085;
+    }
+
+    div i[class^="fa"] {
+        font-size: 100px;
+        color: white;
+    }
+    
+
+    </style>
+</head>
+<body>
+    <main>
+        <div id="home">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            houdunren.com
+        </div>
+        <div id="video">
+            <i class="fa fa-vimeo" aria-hidden="true"></i>
+        </div>
+        <div id="live">
+            <i class="fa fa-viadeo" aria-hidden="true"></i>
+        </div>
+    </main>
+    <nav>
+        <a href="#home">home</a>
+        <a href="#video">video</a>
+        <a href="#live">live</a>
+    </nav>
+</body>
+</html>
