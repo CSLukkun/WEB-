@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            height: 60vh;
+            background-color: darkblue;
+        }
+
+        .container div {
+            height: 200px;
+            width: 200px;
+            background: white;
+            border: solid 1px #ddd;
+            transition: all .5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            text-transform: uppercase;
+            color: blueviolet;
+            overflow: hidden;
+            border: solid 3px #555;
+            box-sizing: border-box;
+        }
+
+        .container div img {
+            height: 100%;
+        }
+        .container:hover div{
+            transform: scale(.8);
+            cursor: pointer;
+            filter: blur(15px);
+        }
+       .container div:hover {
+        transform: scale(1.6);
+        color: white;
+        filter: none;
+        z-index: 2;
+    }
+    .container div:hover::after {
+        content: '';
+        position: absolute;
+        background: #000;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+    }
+    </style>
+    <!-- 
+        要点在hover container是一个模糊样式
+        hover图片是清晰的样式
+        且hover图片时要将z-inde调到最高
+
+     -->
+</head>
+
+<body>
+    <div class="container">
+
+        <div>
+            <img src="./images/1.png" alt="">
+        </div>
+        <div>
+            <img src="./images/2.png" alt="">
+        </div>
+        <div>
+            <img src="./images/3.png" alt="">
+        </div>
+      
+
+    </div>
+
+</body>
+
+</html>

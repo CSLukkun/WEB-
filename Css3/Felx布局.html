@@ -8,9 +8,10 @@
         .wrapper{
             display: flex;
             width: 80%;
-            margin: 10px auto;
+            margin: 0px auto;
             background-color: brown;
             height: 600px;
+            
         }
         .left{
             width: 200px;
@@ -23,16 +24,31 @@
             background-color: cornsilk;
             height: 600px;
         }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .container div:first-child{
+            text-align: center;
+            margin: 0;
+        }
     </style>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="left">
-hi
-        </div>
-        <div class="right">
-hello
+    <div class="container">
+        <div>标题</div>
+        <div class="wrapper">
+        
+            <div class="left">
+    hi
+            </div>
+            <div class="right">
+    hello
+            </div>
         </div>
     </div>
+
 </body>
 </html>

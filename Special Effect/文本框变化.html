@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        background: #2c3e50;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        width: 100vw;
+        height: 100vh;
+        padding: 20px;
+    }
+
+    input {
+        border: solid 5px #e67e22;
+        height: 60px;
+        width: 100%;
+        margin-bottom: 20px;
+        transition: 2s;
+    }
+
+    input:hover {
+        border: solid 5px #000 !important;
+    }
+
+    input:focus {
+        background: #e67e22;
+    }
+
+    input:checked {
+        position: relative;
+        width: 60px;
+        height: 60px;
+        border: none;
+    }
+
+    input:checked::before {
+        content: '⩗';
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3em;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        box-sizing: border-box;
+        background: #3498db;
+    }
+    </style>
+</head>
+<body>
+    <input type="text">
+<input type="checkbox" checked>
+</body>
+</html>

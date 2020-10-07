@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            width: 100vw;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            width: 400px;
+            height: 400px;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: nowrap;
+        }
+
+        div::before {
+            content: 'K';
+            font-size: 3em;
+            color: #2c3e50;
+            background: #95a5a6;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10%;
+            transition-duration: 2s;
+            cursor: pointer;
+        }
+
+        div:hover::before {
+            transition-duration: 1.5s;
+            border-radius: 50%;
+            background: #f1c40f;
+            transform: rotate(360deg);
+        }
+
+        div::after {
+            content: 'Lukkun';
+            text-transform: uppercase;
+            position: absolute;
+            bottom: -60px;
+            font-size: 2em;
+            color: #95a5a6;
+            text-align: center;
+            transform: translateX(-999px) skew(45deg);
+            transition-duration: 1s;
+        }
+
+        div.move::after {
+            transform: translateX(0px) skew(0deg);
+        }
+        /* 指的是一个标签 */
+    </style>
+</head>
+
+<body>
+    <main>
+        <div>
+
+        </div>
+    </main>
+</body>
+<script>
+    document.querySelector('div').addEventListener('transitionend', function (e) {
+        document.querySelector('div').className = 'move';
+    })
+</script>
+
+</html>
