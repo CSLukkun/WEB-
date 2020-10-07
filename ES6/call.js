@@ -14,5 +14,7 @@ Function.prototype.mycall=function(obj,...args){
     var res = obj.fn(...args);
     return res;
 }
-Show.mycall(obj,1,2);
+Show.mycall(obj,1,2);  //理解为obj.Show(1,2)
 //改变this实例对象的指向
+Show.call(obj,1,2);
+

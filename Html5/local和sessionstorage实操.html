@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .add{
+            border: 1px red solid;
+            width: 100%;
+            position: relative;
+            height: 40vh;
+            
+        }
+        .add div:nth-child(1){
+            
+            margin: 0 auto;
+            text-align: left;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .search{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="add">
+        <div>
+            <label for="username">用户名</label>
+            <input type="text" name="" id="username">
+            <br>
+            <label for="password">密码</label>
+            <input type="text" name="" id="password">
+            <br>
+            <button onclick="add()">添加</button>
+        </div>
+
+    </div>
+    <div class="search">
+        <label for="username"></label>
+        <input type="text" name="" id="searchusername">
+        <button onclick="find()">搜索</button>
+    </div>
+    <div id="show">
+
+    </div>
+    <button onclick="loadall()">搜索</button>
+
+</body>
+<script>
+    function add(){
+        var user = new Object;
+        user.username = document.getElementById('username').value;
+        user.password =  document.getElementById('password').value;
+        var str = JSON.stringify(user);
+        localStorage.setItem(user.username,str)
+    }
+    function find(){
+        var search = document.getElementById('searchusername').value;
+        var str = localStorage.getItem(search);
+        
+        var list = document.getElementById('show');
+        console.log(str);
+        var result = JSON.parse(str);
+        list.innerHTML = `用户名是${result.username},密码是${result.password}`
+    }
+    function loadall(){
+        var showall = document.getElementById('show');
+        if(localStorage.length>0){
+            var result = `<table border='1'>`
+            result+=`<tr><td>用户名</td><td>密码</td>`
+            for(var i =0;i<localStorage.length;i++){
+
+                    var name = localStorage.key(i);
+                    console.log(name);
+                    var str = localStorage.getItem(name);
+                    var pswd = JSON.parse(str).password;
+                    
+                    result+=`<tr><td>${name}</td><td>${pswd}</td>`;
+            }
+            result+=`</table>`
+            showall.innerHTML = result;
+        }
+    }
+</script>
+</html>
