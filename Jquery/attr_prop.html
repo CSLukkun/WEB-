@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				cursor: pointer;
+			}
+			.play{
+				background-color: green;
+			}
+			.pause{
+				background-color: grey;
+			}
+		</style>
+	</head>
+	<body>
+		<label> 选中 <input type="checkbox" name="" id="" value="" checked="" /></label>
+		<div class="pause"></div>
+	</body>
+	<script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$('input').change(function (){
+			console.log($(this).prop('checked'));
+		})
+		$('div').click(function (){
+			$(this).toggleClass('pause');
+			$(this).toggleClass('play');
+			//播放和暂停之间来回切换
+		})//来回切换样式
+	</script>
+</html>

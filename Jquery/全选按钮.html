@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="checkbox" name="" id="all" value="1" />
+		<div>
+		<input type="checkbox" name="one" id="" value="2" />
+		<input type="checkbox" name="two" id="" value="3" />
+		<input type="checkbox" name="three" id="" value="4" />
+		</div>
+	</body>
+	<script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$('#all').change(function(){
+			var isChecked = $(this).prop('checked');
+			
+			$('input').prop('checked',isChecked);
+		})
+		$('div input').change(function(){
+			var checkedcount = $('div input:checked').length;
+			var allcount = $('div input').length;
+			checkedcount == allcount?$('#all').prop('checked',true):$('#all').prop('checked',false)
+		})
+	</script>
+</html>

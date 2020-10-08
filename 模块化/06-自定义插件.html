@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			
+		</div>
+		<div>
+
+		</div>
+		<script src="./jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//1.定义在jquery.fn的基础上
+			//2.命名冲突如何解决
+			//3.循环jquery对象的每个元素
+			//4.在函数中将jquery返回
+		//
+		(function ($) {
+			$.fn.extend({
+				//为jquery添加一个randomColor()函数
+				randomColor:function(){
+				//console.log('aaaa');	
+				function random(){
+					var r=Math.floor(Math.random()*256)
+					var g=Math.floor(Math.random()*256)
+					var b=Math.floor(Math.random()*256)
+					return `rgb(${r},${g},${b})`;
+				}//随机得到一个颜色
+				this.each(function (index,el){
+					//循环为每一个对象添加绑定事件
+					//e====this
+					$(this).css({
+						backgroundColor:random()
+					})
+				})
+				return this;//实现链式操作
+				}
+			})
+		})(jQuery);
+		
+		console.log($('div').randomColor());
+		</script>
+	</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			
+			//一个主类，完成最基本的任务
+			//其他继承类，完成具体的任务
+			//prototype的中是继承父类的方法
+			function Strategy(){
+
+
+				}
+			Strategy.prototype.tactics() = function(){
+				console.log('基础策略')
+			}
+				
+
+
+			function strategyA(){
+
+			}
+			strategyA.prototype = Object.create(Strategy.prototype);
+			//strategyA的实例对象就继承strategy的实例对象的属性
+			strategyA.prototype.tactics() = function (){
+				console.log('骚扰敌人打野');
+			}
+
+
+			function strategyB(){
+				
+			}
+			strategyB.prototype = Object.create(strategy.prototype);
+			strategyB.prototype.tactics = function (){//表示这个函数所创建的对象所拥有的方法
+				console.log('猥琐发育');
+			}
+
+
+			function strategyC(){
+				
+			}
+			strategyC.prototype = Object.create(strategy.prototype);
+			strategyC.prototype.tactics = function (){
+				console.log('骚扰敌人打野C');
+			}
+
+			
+			function G2Victory(stra){
+				this.strategy = stra;
+				
+				G2Victory.prototype.victory = function(){
+					//console.log(this.strategy);
+					this.strategy.tactics();
+				}
+	
+			}
+			var v = new G2Victory(new strategyA())
+			v.victory()
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

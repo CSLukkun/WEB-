@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			//单例模式：只能创建唯一一个实例
+			function Singleton(){
+				if(!Singleton._instance){
+					Singleton._instance = {}
+				}
+				return Singleton._instance;
+			}
+			var s1 = Singleton();
+			var s2 = Singleton();
+			alert(s1 === s2);
+			var s3 = Singleton();//相等
+			//应用 王者荣耀 ---暗影主宰
+			function DarkMaster(){
+				if(!DarkMaster._instance){
+					DarkMaster._instance = {
+						count:30,
+						saysth:function(){
+							
+						},
+						countDown:function(){
+							
+						},
+						show: function(){
+							
+						},
+						dead:function(){
+							this.countDown;
+						}
+					}
+					return DarkMaster._instance
+				}
+			}
+			//仅仅创建一个对象,无论new多少个都是这一个
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

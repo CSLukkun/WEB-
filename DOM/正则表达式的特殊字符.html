@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// //.表示除了换行符之外的所有单个字符
+			// var reg = /g..gle/g;
+			// console.log(reg.test("google"));
+			// //n*表示0个或多个n的字符串
+			// var reg = /g*le/g;
+			// console.log(reg.test("google"));
+			// console.log("goggle ggggle".match(reg));
+			// //从0个n开始找，最先找到就匹配
+			// //n+最少有一次重复匹配
+			// //n？表示0或1个n的字符串
+			// //[]表示可以出现的范围[0-9]
+			// var reg = /[0-9]/gi;
+			// var str = "a";
+			// console.log(reg.test(str));
+			// //\w 匹配数字字母下划线等同于[0-9a-zA-Z_]
+			// //\w 匹配非数字字母下划线
+			// //\d 匹配数字[0-9]
+			// //\D 匹配非数字
+			// //\s 匹配空格
+			// var reg = /\s/gi;
+			// var str = "go go go"
+			// console.log(str.replace(reg,""));
+			// //n{m,n}匹配包含 X 至 Y 个 n 的序列的字符串。
+			// // /^g.+g$/以g开头，以g结尾的字符串
+			var reg = /^go*g$/;
+			var str = "goog"
+			reg.test(str);//RegExp这个对象会在我们调用了正则表达式的方法后, 
+										//自动将最近一次的结果保存在里面
+								//所以如果我们在使用正则表达式时, 有用到分组, 那么就可以直接在调用完以后直接
+								//使用RegExp.$xx来使用捕获到的分组内容
+			console.log(RegExp.$1);
+			// | 或
+			var reg = /(google)|(yahoo)|(tecent)/
+			
+			// ()分组，作为一个整体
+			var reg = /(google){4,6}/gi;
+			console.log(RegExp.$1);//仅仅对分组而言
+
+
+			
+			//$1
+		</script>
+	</body>
+</html>

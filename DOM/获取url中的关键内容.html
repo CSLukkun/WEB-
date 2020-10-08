@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*?id = 5&&search = ok
+				获取url中的内容
+			*/
+		   function getsearch(search,key){
+			   var start = search.indexOf(key);
+			   //找到关键字开始的位置
+			   //
+			   if(start ==-1){
+				   return ;
+			   }
+			   else{
+				   var end = search.indexOf("&",start);
+				   //从关键字之后开始找&
+				   if(end == -1)
+				   //这是最后一个键值对
+				   end = search.length;
+				   var str = search.substring(start,end);//end不包括
+				   //alert(str);
+				   var arr = str.split("=");//以等号进行切分
+				   return arr[1];
+			   }
+		   }
+
+		   var search = "?id=5&&status=ok"
+		   alert(getsearch(search,'status'));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

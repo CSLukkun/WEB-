@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<script src="../007/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$.ajax({
+			type:'get',
+			url:'./person.json',
+			data:{
+				name:'黄忠'
+			},
+			success:function(res){
+				alert(res.hobby);
+			},//res为接受到的数据对象
+			error:function(){
+			}
+		})
+		// $.ajax({
+		// 	type:'get',
+		// 	url:'./person.json',
+		// }).done(function (){
+			
+		// }).fail(function(){
+			
+		// })
+		// $.ajax({
+		// 	type:'get',
+		// 	url:'./api1'
+		// }).done(function (){
+		// 	url:'./api2'
+		// }).done(function (){
+		// 	return $.ajax({
+		// 		url:'./api3'
+		// 	}).done(function(){
+		// 		console.log('调用结束')
+		// 	})
+		// })
+
+	</script>
+	<body>
+	</body>
+</html>

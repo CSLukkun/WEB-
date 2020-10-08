@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+		</ul>
+		<script src="../007/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			// $('li').on('mouseout',function(){
+			// 	$(this).css('background','red')
+			// }).on('mouseover',function(){
+			// 	$(this).css('background','green');
+			// })//链式代理
+			// //事件绑定
+			// $('li:eq(3)').off('mouseover');//关闭这个响应事件
+			$('<li>newli</li>').appendTo('ul');
+			//事件代理
+			$('ul').on('mouseover','li', function(){
+				$(this).css('background','green');
+			})
+			
+			$('<li>newlis</li>').appendTo('ul');
+		</script>
+	</body>
+</html>
