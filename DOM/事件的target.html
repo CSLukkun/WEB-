@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="radio">
+    <input type="radio">
+    <input type="radio">
+    <input type="radio">
+    <input type="radio">
+    <input type="radio">
+</body>
+    <script>
+        var inputs = document.getElementsByTagName('input');
+        for(let i =0 ;i<inputs.length;i++){
+            inputs[i].onclick = function(e){
+                var target =e.target||e.srcElement;
+                for(let i =0;i<inputs.length;++i){
+                if(target.type=='radio'&&target == inputs[i]){
+                    alert(++i);
+                    break;
+                }
+            }
+            }
+        }
+    </script>
+</html>
