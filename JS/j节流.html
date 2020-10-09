@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 节流throttle代码（定时器）：//增加了一个剩余时间控制位,解决了第一次触发事件的问题
+    var throttle = function (func, delay) {
+        var timer = null;//增加时间戳
+        var startTime = Date.now();
+        return function () {
+            var curTime = Date.now();
+            var remaining = delay - (curTime - startTime);//计算每次delay1的剩余时间
+            console.log(remaining)                          //如果剩余时间为正就需要等待剩余时间
+            var context = this;
+            var args = arguments;
+
+            clearTimeout(timer);
+            if (remaining <= 0) {
+                func.apply(context, args); //如果剩余时间为负,立刻调用
+                startTime = Date.now();
+            } else {
+                timer = setTimeout(func, remaining);
+            }
+        }
+    }
+
+    function handle() {
+        console.log('handle结束');
+    }
+    window.addEventListener('click', throttle(handle, 3000));
+</script>
+
+</html>
