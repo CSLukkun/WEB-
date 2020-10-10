@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            /* 触摸会变色 */
+        }
+
+        body {
+            font-size: 14px;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ccc;
+
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        input {
+            outline: none;
+            border: none;
+        }
+
+
+        .layout {
+            min-width: 320px;
+            max-width: 640px;
+            margin: 0 auto;
+            height: 1000px;
+
+        }
+
+        .header {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 50px;
+
+        }
+
+        .header_box {
+            min-width: 320px;
+            max-width: 640px;
+            margin: 0 auto;
+            height: 50px;
+            background-color: #f5f5f5;
+        }
+
+        .header_box form {
+            position: relative;
+            padding-left: 5px;
+            padding-right: 40px;
+        }
+
+        .header_box form .icon_search {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 17px;
+            top: 11px;
+            background: url(./images/un_ico_home_v620.png);
+            background-size: 104px 327px;
+            background-position: -59px -276px;
+        }
+
+        .header_box form input {
+            width: 100%;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid #999;
+            margin-top: 5px;
+            padding-left: 25px;
+        }
+
+        .header_box form .mine {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+
+        .header_box form .mine::before {
+            content: '';
+            display: block;
+            width: 25px;
+            height: 25px;
+            background: url('./images/un_ico_home_v620.png');
+            background-size: 104px 327px;
+            background-position: -59px -193px;
+        }
+
+        .banner {
+            width: 100%;
+            overflow: hidden;
+            padding-top: 50px;
+
+        }
+
+        .banner ul {
+            width: 1000%;
+
+        }
+
+        .banner ul li {
+            width: 10%;
+            float: left;
+            border-radius: 10px;
+
+        }
+
+        .banner ul li a {
+            width: 100%;
+            display: block;
+
+        }
+
+        .banner ul li a img {
+            display: block;
+            width: 100%;
+
+        }
+        .main{
+            padding: 5px;
+        }
+        .main .item{
+            margin-bottom: 5px;
+            height: 90px;
+            border-radius: 10px;
+            display: flex;
+            background-color: #f5f5f5;
+        }
+        .main .item .pub{
+            text-align: center;
+            flex:1
+        }
+        .main .item .pub a{
+            height: 90px;
+            line-height: 90px;
+            color: black;
+            border-radius: 5px;
+
+        }
+        .main .item .sub{
+            flex:2
+        }
+        .main .item .sub a{
+            display: block;
+            float: left;
+            width: 50%;
+            text-align: center;
+            height: 45px;
+            line-height: 45px;
+            color: black;
+            border-radius: 5px;
+
+            border-left:1px solid #fff;
+            border-bottom:1px solid #fff ;
+        }
+        .main .item .sub a:nth-last-child(-n+2){
+            border-bottom: none;
+        }
+        .main .item:last-of-type a{
+            width: 33.3%;
+
+        }
+
+        .nav ul{
+            text-align: center;
+            background-color: #f5f5f5;
+            overflow: hidden;
+        }
+        .nav ul li{
+            
+            float: left;
+            width: 25%;
+            height: 50px;
+            line-height: 50px;
+            border-bottom: 1px solid #fff;
+            border-right: 1px solid #fff;
+            
+
+        }
+
+        .nav ul li:nth-of-type(4n){
+            border-right: none;
+        }
+        .nav ul li:nth-last-child(-n+4){
+        /* 注意只能时-n+4 */
+            border-bottom: none;
+        }
+        /* .nav ul li a{
+
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="layout">
+        <div class="header">
+            <div class="header_box">
+                <form action="">
+                    <span class="icon_search"></span>
+                    <input type="text" placeholder="移动端搜索">
+                    <a href="" class="mine">
+                        我的
+                    </a>
+                </form>
+            </div>
+        </div>
+        <div class='banner'>
+            <ul>
+                <li><a href=""><img src="./images/13vym3.jpg" alt=""></a></li>
+                <li><a href=""><img src="./images/banner_2.jpg" alt=""></a></li>
+                <li><a href=""><img src="./images/banner_3.jpg" alt=""></a></li>
+                <li><a href=""><img src="./images/banner_1.jpg" alt=""></a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="item">
+                <div class="pub">
+                    <a href="javascript">地点</a>
+                </div>
+                <div class="sub">
+                    <a href="javascript">地点</a>
+                    <a href="javascript">地点</a>
+                    <a href="javascript">地点</a>
+                    <a href="javascript">地点</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="pub">
+                    <a href="javascript">地点</a>
+                </div>
+                <div class="sub">
+                    <a href="javascript">地点</a>
+                    <a href="javascript">地点</a>
+                    <a href="javascript">地点</a>
+                    <a href="javascript">地点</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="pub">
+                    <a href="javascript">地点</a>
+                </div>
+                <div class="sub">
+                    <a href="javascript">地点</a>
+                    <a href="javascript">地点</a>
+                    <a href="javascript">地点</a>
+                    <a href="javascript">地点</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="sub">
+                    <a href="javascript">地点</a>
+                    <a href="javascript">地点</a>
+                    <a href="javascript">地点</a>
+                    <a href="javascript">地点</a>
+                    <a href="javascript">地点</a>
+                    <a href="javascript">地点</a>
+                </div>
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="">地点</a></li>
+                <li><a href="">地点</a></li>
+                <li><a href="">地点</a></li>
+                <li><a href="">地点</a></li>
+                <li><a href="">地点</a></li>
+                <li><a href="">地点</a></li>
+                <li><a href="">地点</a></li>
+                <li><a href="">地点</a></li>
+                <li><a href="">地点</a></li>
+                <li><a href="">地点</a></li>
+                <li><a href="">地点</a></li>
+                <li><a href="">地点</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
