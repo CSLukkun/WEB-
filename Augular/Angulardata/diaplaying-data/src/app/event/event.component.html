@@ -1,0 +1,8 @@
+<input type="text" #newHero 
+(keyup.enter)="addhero(newHero.value)"
+    (blur) = "addhero(newHero.value);newHero.value=''"
+>
+<button (click)='addhero(newHero.value)'>Add</button>
+<ul>
+    <li *ngFor = 'let hero of heroes'>{{hero}}</li>
+</ul>
