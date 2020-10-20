@@ -1,0 +1,201 @@
+$font-stack: Helvetica,
+sans-serif;
+$primary-color: #333;
+
+body {
+    font: 100% $font-stack;
+    color: $primary-color;
+}
+
+nav {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        display: inline;
+    }
+
+    a {
+        display: block;
+    }
+}
+
+div {
+    $width: 100px;
+    width: $width;
+}
+
+$link-color:blue;
+
+a {
+    color: $link_color;
+}
+
+#content {
+    background-color: #5555;
+
+    aside {
+        background-color: yellow;
+    }
+}
+
+article a {
+    color: blue;
+
+    :hover {
+        color: red
+    }
+
+    span {
+        height: 1px;
+    }
+}
+
+//上面意味着article a中的所有子元素都会个上hover伪类
+//但是实际上我们指向给予a这个元素伪类.
+article a {
+    color: blue;
+
+    &:hover {
+        color: red
+    }
+}
+
+//这个里的&表示自身
+#content aside {
+    color: red;
+
+    body.ie & {
+        color: green
+    }
+}
+
+//嵌套选择器
+//>直接子元素
+//+相邻同级元素
+//~所有同级元素组合
+.container {
+
+    h1,
+    h2,
+    h3 {
+        margin-bottom: .8em
+    }
+}
+
+article {
+    ~article {
+        border-top: 1px dashed #ccc
+    }
+
+    >section {
+        background: #eee
+    }
+
+    dl> {
+        dt {
+            color: #333
+        }
+
+        dd {
+            color: #555
+        }
+    }
+
+    nav+& {
+        margin-top: 0
+    }
+}
+
+//嵌套属性
+nav {
+    border: {
+        //注意空格
+        color: black;
+        width: 1px;
+    }
+}
+
+//sass文件的导入
+//举例来说，你想导入themes/_night-sky.scss
+//这个局部文件里的变量，你只需在样式表中写@import "themes/night-sky";
+$fancybox-width: 400px !default;
+
+.fancybox {
+    width: $fancybox-width;
+}
+
+//如果别人在导入这个sass样式之前没有对$fancybox-width声明,那么就用着这个.
+//如果有声明,那么400px无效.
+//嵌套导入
+//可以在css规则内导入
+.blue-theme {
+    @import "blue-theme";
+}
+
+//不能导入一个原始的css文件,因为sass会认为你想用css原生的@import
+
+
+//混合器
+//处理大段大段重用样式的代码
+@mixin rounded-corners {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+//跨浏览器的圆角边框
+notice {
+    background-color: green;
+    border: 2px solid #00aa00;
+    @include rounded-corners;
+}
+
+//使用@mixin和@include
+//混合器传参
+@mixin link-colors($normal, $hover, $visited) {
+    color: $normal;
+
+    &:hover {
+        color: $hover;
+    }
+
+    &:visited {
+        color: $visited
+    }
+}
+
+a {
+    @include link-colors(red, blue, black)
+}
+
+//选择器继承
+//通过@extend语法实现
+.error {
+    border: 1px solid red;
+    background-color: #fdd;
+}
+
+.seriousError {
+    @extend .error;
+    border: 3px;
+}
+
+//只要和error相关的都会被应用上.
+.error a {
+    //应用到.seriousError a
+    color: red;
+    font-weight: 100;
+}
+
+h1.error {
+    //应用到hl.seriousError
+    font-size: 1.2rem;
+}
+//何时应用呢,比如需要对其细化的时候.
+//显然是一般的错误我们使用error已经能够解决了,当如果是
+//更加复杂的错误,我们就需要使用seriouserror,不仅有着error的样式
+//还有着自己的样式
