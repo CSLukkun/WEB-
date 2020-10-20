@@ -10,17 +10,15 @@
 		</script>
 	</head>
 	<body>
-			<h1>
-				
-				
-				
-			</h1>
+
+
 			<script type="text/javascript">
 				// 1.创建AJax对象
 				// 2.打开这个对象
 				// 3.发送请求
 				// 4.监听请求
-				var xhr = new XMLHttpRequest();
+				function get(){
+					var xhr = new XMLHttpRequest();
 				xhr.open('get','test.txt',true);//true规定异步还是同步,第三个参数为true，表示JavaScript异步执行，不等待后台返回
 				
 				
@@ -47,6 +45,8 @@
 						document.querySelector("h1".inner) = "flase";
 					}
 				}
+				}
+			
 			</script>
 	</body>
 </html>

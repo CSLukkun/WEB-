@@ -1,0 +1,5 @@
+<h3>倒计时</h3>
+<button (click) = timer.start()>开始</button>
+<button (click) = timer.stop()>结束</button>
+<div class="seconds">{{timer.seconds}}</div>
+<app-local-child #timer></app-local-child>

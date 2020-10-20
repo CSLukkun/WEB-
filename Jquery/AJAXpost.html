@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-	</head>
-	<body>
 
-		<script type="text/javascript">
-			var xhr = new XMLHttpRequest();//创建对象
-			xhr.open('post','login.php',true);//配置对象
-			xhr.setRequestHeader('Content-Type','application/x-www-form-urlencode');
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+
+<body>
+	<form action="" method="POST">
+		用户名:<input type="text" name="username" id="user">
+		密码:<input type="password" name="password" id='pswd'>
+		<input type="button" value="提交" onclick="post()">
+		<!-- <button>提交</button>button可能会影响ajax的提交 -->
+	</form>
+	<script type="text/javascript">
+		function post() {
+			var username=document.getElementById("user").value;
+            var pswd=document.getElementById("pswd").value;
+			var xhr = new XMLHttpRequest(); //创建对象
+			xhr.open('post', 'login.php', true); //配置对象
+			xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencode');
 			//设定请求头，指定body中的数据是什么格式
-			xhr.send('user=gap&password=123456');
+			xhr.open('post', url, true);
+			xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+			xhr.send(serialize(params));
+			xhr.send("username="+username+"&password="+pswd);
 			//发送请求
-			xhr.onreadystatechange = function(){
-				if(xhr.readyState !=4){
-					return ;
-				}
-				else{
-					if(xhr.status>=200 && xhr.status<=300){
+			xhr.onreadystatechange = function () {
+				if (xhr.readyState != 4) {
+					return;
+				} else {
+					if (xhr.status >= 200 && xhr.status <= 300) {
 						var resp = JSON.parse(xhr.responseText);
-						if(resp.result){
+						if (resp.result) {
 							alert('登录成功')
-						}else{
+						} else {
 							alert('登录失败')
 						}
 					}
 				}
 			}
-			
-		</script>
-	</body>
+		}
+	</script>
+</body>
+
 </html>

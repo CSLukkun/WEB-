@@ -1,0 +1,49 @@
+<div [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container">
+  <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
+</div>
+<button (click)='toggle()'>切换</button>
+<div style="width: 200px; height: 200px;background-color: #67ee38" [@flyInOut]></div>
+<br>
+<br>
+<h5>动画作用在子元素上</h5>
+<br>
+<div [@queryAnimation]="'goAnimate'">
+  <h1>Title</h1>
+  <div class="content">
+    Blah blah blah
+  </div>
+</div>
+<br>
+<h5>animationChild</h5>
+<br>
+<button (click)="exp =! exp">Toggle</button>
+<br>
+<br>
+<div [@parentAnimation]="exp">
+  <header>Hello</header>
+  <div [@childAnimation]="exp">
+    第一个child
+  </div>
+  <div [@childAnimation]="exp">
+    第二个child
+  </div>
+  <div [@childAnimation]="exp">
+    第三个child
+  </div>
+</div>
+<div [@childAnimation]="exp">
+  我不是子动画.
+</div>
+<h5>入场出场动画</h5>
+<br>
+<button (click)="onEnterOuterSwitch()">进场or离场</button>
+<br>
+<ul>
+  <li *ngFor="let item of list">
+    <div *ngIf="show" style="width: 100px; height: 100px; background-color: #67ee38" [@flyInOut]="'in'"></div>
+  </li>
+</ul>
+<br>
+<h5>并行动画组(同时执行多个动画)</h5>
+<br>
+<div style="width: 200px; height: 200px; background-color: blue" [@group]></div>

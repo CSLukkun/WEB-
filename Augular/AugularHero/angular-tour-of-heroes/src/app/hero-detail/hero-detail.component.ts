@@ -18,7 +18,7 @@ export class HeroDetailComponent implements OnInit {
     private route: ActivatedRoute,
   private heroService: HeroService,
   private location: Location
-
+    //三个服务实例化
   ) { }
 
   ngOnInit(): void {
@@ -28,7 +28,9 @@ export class HeroDetailComponent implements OnInit {
     const id = +this.route.snapshot.paramMap.get('id');
     this.heroService.getHero(id)
       .subscribe(hero => this.hero = hero);
+      //从路由参数中获取到id值
   }
+  
   save(): void {
     this.heroService.updateHero(this.hero)
       .subscribe(() => this.goBack());

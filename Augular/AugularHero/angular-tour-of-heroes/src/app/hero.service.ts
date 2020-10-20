@@ -4,7 +4,7 @@ import { Hero } from './hero';
 import {Observable,of} from 'rxjs'
 import { MessagesService } from './messages.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { catchError, map, tap } from 'rxjs/operators';
+import { catchError, tap } from 'rxjs/operators';
 
 
 @Injectable({
@@ -47,7 +47,8 @@ private log(message: string) {
 
 }
 
-private heroesUrl = '.api/heroes';  // URL to web api
+private heroesUrl = 'api/heroes';  // URL to web api
+
 /** PUT: update the hero on the server */
 updateHero(hero: Hero): Observable<any> {
   return this.http.put(this.heroesUrl, hero, this.httpOptions).pipe(

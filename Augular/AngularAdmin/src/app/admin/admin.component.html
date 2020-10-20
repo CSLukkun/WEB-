@@ -1,0 +1,44 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+  
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+          <span class="sr-only">切换导航</span>
+          <span class="icon-bar">User</span>
+          <span class="icon-bar">Setting</span>
+        </button>
+        <a class="navbar-brand" routerLink="dashboard">Lk-Admin</a>
+  
+      </div>
+  
+      <div class="collapse navbar-collapse" id="example-navbar-collapse">
+  
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <button class="btn navbar-btn login-out" (click)="loginOut()">
+              <span class="glyphicon glyphicon-log-out login-out-icon"></span> 登出</button>
+          </li>
+        </ul>
+  
+        <form class="navbar-form nav navbar-nav navbar-right">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">🔍</button>
+        </form>
+  
+        <ul class="nav navbar-nav navbar-right">
+          <li routerLinkActive="active">
+            <a routerLink="user">用户</a>
+          </li>
+          <li routerLinkActive="active">
+            <a routerLink="setting">设置</a>
+          </li>
+        </ul>
+  
+      </div>
+    </div>
+  </nav>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>

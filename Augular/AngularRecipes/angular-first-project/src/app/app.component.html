@@ -1,0 +1,13 @@
+<app-header
+(featureChange)="onNavigate($event)">
+<!-- 接收到feature事件,header元素改变 -->
+</app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-recipes *ngIf="loadedFeature === 'recipe'"></app-recipes>
+      <!-- 根据接收来的事件来进行判断是否展示 -->
+      <app-shopping-list *ngIf= "loadedFeature !=='recipe'"></app-shopping-list>
+    </div>   
+  </div>
+</div>

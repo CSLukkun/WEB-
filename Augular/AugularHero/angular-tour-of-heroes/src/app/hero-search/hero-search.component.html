@@ -5,7 +5,12 @@
   
     <ul class="search-result">
       <li *ngFor="let hero of heroes$ | async" >
+        <!-- 由于 *ngFor 不能直接使用 Observable，所以要使用一个管道字符（|），后面
+          紧跟着一个 async。这表示 Angular 的 AsyncPipe 管道，它会自动订阅 Observable，这样你就不用在组件类中这么做了。
+        heroes$定义在组件类中 -->
         <a routerLink="/detail/{{hero.id}}">
+      
+
           {{hero.name}}
         </a>
       </li>

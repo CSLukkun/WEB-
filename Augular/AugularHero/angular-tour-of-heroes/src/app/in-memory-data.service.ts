@@ -5,6 +5,7 @@ import { Hero } from './hero';
 @Injectable({
   providedIn: 'root',
 })
+//这是一种http拦截,service里的http请求都会先到这里找数据
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const heroes = [
@@ -21,6 +22,7 @@ export class InMemoryDataService implements InMemoryDbService {
     ];
     return {heroes};
   }
+
 
   // Overrides the genId method to ensure that a hero always has an id.
   // If the heroes array is empty,

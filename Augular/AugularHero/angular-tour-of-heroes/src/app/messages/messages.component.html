@@ -4,5 +4,6 @@
     <button class="clear"
             (click)="messageService.clear()">clear</button>
     <div *ngFor='let message of messageService.messages'> {{message}} </div>
-  
+    <!-- 找到Message服务里的message数组 -->
+        <!-- 在类文件中引入了MessageService -->
   </div>

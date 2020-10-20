@@ -1,0 +1,22 @@
+<p>
+    1. 数据从父组件传到子组件
+  </p>
+  <button (click)="onValueChangeClick()">在父组件里面改变值</button>
+  <p>{{parentHero.name}}</p>
+  <!-- 子组件 -->
+  <div style="border:2px solid green; padding: 4px; margin: 4px">
+    <p>1. 子组件通过@Input的到父组件传递过来的数据</p>
+    <app-data-child [(hero)]="parentHero"></app-data-child>
+  </div>
+  
+  <div style="border:2px solid red; padding: 4px; margin: 4px">
+    <p>2. 子组件通过setter截听输入属性值的变化</p>
+    <app-data-child-setter [name]="nameParent"></app-data-child-setter>
+  </div>
+  
+  <div style="border:2px solid darkslateblue; padding: 4px; margin: 4px">
+    <p>3. 子组件通过ngOnChanges()来截听输入属性值的变化</p>
+    <button (click)="newMinor()">改变 minor 值</button>
+    <button (click)="newMajor()">改变 major 值</button>
+    <app-data-child-changes [major]="major" [minor]="minor"></app-data-child-changes>
+  </div>

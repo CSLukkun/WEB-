@@ -1,9 +1,10 @@
 <h1>{{title}}</h1>
 <nav>
   <a routerLink="/dashboard">Dashboard</a>
+  <!-- routerLink里的标签标记在路由模块中 -->
+  <!-- 需要导入路由模块 -->
   <a routerLink="/heroes">Heroes</a>
 </nav>
 <router-outlet></router-outlet><!-- 路由的显示区域 -->
-
-
 <app-messages></app-messages>
+<!-- 寻找message组件 -->

@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero} from '../hero';
 import {HeroService} from '../hero.service'
-import { MessagesService } from '../messages.service';
-import {Heroes} from '../mock-heroes';
+
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
@@ -23,9 +22,9 @@ export class HeroesComponent implements OnInit {
         .subscribe(heroes => this.heroes = heroes);
   }
   add(name: string): void {
-    name = name.trim();
+    name = name.trim();//移除空白字符串.
     if (!name) { return; }
-    this.heroService.addHero({ name } as Hero)
+    this.heroService.addHero({ name } as Hero)//返回一个可观察对象
       .subscribe(hero => {
         this.heroes.push(hero);
       });

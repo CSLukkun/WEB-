@@ -1,0 +1,8 @@
+<h2>投票</h2>
+<h3>同意人数: {{agreed}}, 不同意人数: {{disagreed}}</h3>
+<div style="border:2px solid green; padding: 4px; margin: 4px">
+  <app-event-child *ngFor="let voter of voters"
+                   [name]="voter"
+                   (voted)="onVoted($event)">
+  </app-event-child>
+</div>
