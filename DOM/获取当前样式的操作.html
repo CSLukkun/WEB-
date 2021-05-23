@@ -8,14 +8,16 @@
 				var oDiv = document.getElementById("div1");
 				//alert(oDiv.style.backgroundColor);//获取不到
 				//只能找到内嵌式的css样式
-				alert(getComputedStyle(oDiv)["width"]);//获取的是有效的样式
+				// alert(getComputedStyle(oDiv)["width"]);//获取的是有效的样式
 				//火狐谷歌safari
 				//下面的是IE浏览器获取的方法：
-				alert(oDiv.currentStyle("width"));
+				// alert(oDiv.currentStyle("width"));
 				function getStyle(elem,attr){
 					return elem.currentStyle ? elem.currentStyle[attr] : 
-					getComputedStyle(elem)["width"];//返回的是一个对象
+					getComputedStyle(elem)[attr];//返回的是一个对象
 				}
+				// getComputedStyle(oDiv)["width"]
+				// oDiv.currentStyle("width")
 			}
 		</script>
 		<style type="text/css">

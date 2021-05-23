@@ -8,6 +8,8 @@
 			//对象特点：1.不重复2.无序
 			window.onload = function(){
 				var oDiv = document.getElementById("div1");
+				alert(oDiv.attributes);
+				console.log(oDiv.attributes);
 				alert(oDiv.attributes.length);
 				alert(oDiv.attributes["title"].nodeValue);
 			}

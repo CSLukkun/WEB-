@@ -5,23 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-    div {
+    #div {
         transition: 2s;
         transform: translateX(200px) translateX(50px);
         width: 100px;
         height: 100px;
         background: #9b59b6;
     }
-
-    div:hover {
+    #div:hover {
         transition: 2s;
         transform: translateX(100px);
+    }
+    .box{
+        width: 100px;
+        height: 100px;
+        background: #9b59b6;
+        transform: translateX(100px)
     }
     </style>
 </head>
 <body>
-    <div>
+    <div id="div">
         
     </div>
+    <div class="box"></div>
 </body>
 </html>

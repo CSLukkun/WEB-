@@ -17,6 +17,7 @@
         var inputs = document.getElementsByTagName('input');
         for(let i =0 ;i<inputs.length;i++){
             inputs[i].onclick = function(e){
+                // target是指绑定的元素
                 var target =e.target||e.srcElement;
                 for(let i =0;i<inputs.length;++i){
                 if(target.type=='radio'&&target == inputs[i]){

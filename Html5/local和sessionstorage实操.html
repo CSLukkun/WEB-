@@ -10,10 +10,8 @@
             width: 100%;
             position: relative;
             height: 40vh;
-            
         }
         .add div:nth-child(1){
-            
             margin: 0 auto;
             text-align: left;
             position: absolute;
@@ -61,7 +59,6 @@
     function find(){
         var search = document.getElementById('searchusername').value;
         var str = localStorage.getItem(search);
-        
         var list = document.getElementById('show');
         console.log(str);
         var result = JSON.parse(str);
@@ -73,12 +70,10 @@
             var result = `<table border='1'>`
             result+=`<tr><td>用户名</td><td>密码</td>`
             for(var i =0;i<localStorage.length;i++){
-
                     var name = localStorage.key(i);
                     console.log(name);
                     var str = localStorage.getItem(name);
                     var pswd = JSON.parse(str).password;
-                    
                     result+=`<tr><td>${name}</td><td>${pswd}</td>`;
             }
             result+=`</table>`

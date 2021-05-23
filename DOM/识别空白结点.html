@@ -26,9 +26,8 @@
 		   }
 		   function rmspaceNode2(parent){
 				   var nodes = parent.childNodes;//返回一个节点列表
-				   //html的节点共分为三种:元素节点,文本节点,标签节点
+				   //html的节点共分为三种:元素节点,文本节点,注释节点
 				for(var i = nodes.length-1;i >= 0;i--){
-					
 					if(nodes[i].nodeType==3 && /^\s+$/.test(nodes[i].nodeValue))
 					{//删除数组元素倒删的原因：删掉一个数组元素，下一个数组元素会顶上来
 					//解决方法：倒着删，或者删完再检测一个
@@ -46,13 +45,12 @@
 				return parent
 		   }
 		   window.onload = function(){
-				var oDiv = document.getElementById("look");
-			  console.log(oDiv.childNodes);
-
+			var oDiv = document.getElementById("look");
+			console.log(oDiv.childNodes);
 			  //为5个
 			  //alert(rmspaceNode(oDiv.childNodes).length);
-			  console.log(rmspaceNode2(oDiv).childNodes)
-			  console.log(oDiv.childNodes);
+			console.log(rmspaceNode2(oDiv).childNodes)
+			console.log(oDiv.childNodes);
 
 			 	
 			  //    console.log(newOdiv)

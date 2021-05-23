@@ -17,27 +17,3 @@ arrkey.forEach((item, index) => {
 })
 console.log(obj)
 console.log(obj[max]);
-
-function Ajaxquery(url){
-    let Ajax = new Promise((resolve,rejected) =>{
-            let xhr = new XMLHttpRequest();
-          xhr.open('get',url);
-          xhr.send();
-          xhr.onreadystatechange = function(){
-            if(xhr.readyState !=4){
-              return ;
-          }
-          if(xhr.readyState ==4 && xhr.status == 200){
-            resolve(xhr.responseText);
-          }
-          else{
-            reject('服务器出错');
-          }
-        }
-    })
-    return Ajax;
-}
-    AjaxQuery(oneurl).then(data => {
-              console.log(data);
-                        return AjaxQuery(twourl);
-    })

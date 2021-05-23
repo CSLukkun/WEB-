@@ -1,1 +1,8 @@
-{"version":3,"sourceRoot":"","sources":["input.scss"],"names":[],"mappings":"AAIA;EACI;EACA,OAJY;;;AAQZ;EACI;EACA;EACA;;AAGJ;EACI;;AAGJ;EACI;;;AAIR;EAEI,OADQ;;;AAMZ;EACI,OAHQ;;;AAMZ;EACI;;AAEA;EACI;;;AAIR;EACI;;AAEA;EACI;;AAGJ;EACI;;;AAMR;EACI;;AAEA;EACI;;;AAKR;EACI;;AAEA;EACI;;;AAQJ;EAAY;;;AAGZ;EAAY;;AACZ;EAAY;;AAEV;EAAK;;AACL;EAAK;;AAEP;EAAU;;;AAGd;EAEQ;EACA","file":"output.css"}
+{
+    "version": 3,
+    "sourceRoot": "",
+    "sources": ["input.scss"],
+    "names": [],
+    "mappings": "AAIA;EACI;EACA,OAJY;;;AAQZ;EACI;EACA;EACA;;AAGJ;EACI;;AAGJ;EACI;;;AAIR;EAEI,OADQ;;;AAMZ;EACI,OAHQ;;;AAMZ;EACI;;AAEA;EACI;;;AAIR;EACI;;AAEA;EACI;;AAGJ;EACI;;;AAMR;EACI;;AAEA;EACI;;;AAKR;EACI;;AAEA;EACI;;;AAQJ;EAAY;;;AAGZ;EAAY;;AACZ;EAAY;;AAEV;EAAK;;AACL;EAAK;;AAEP;EAAU;;;AAGd;EAEQ;EACA",
+    "file": "output.css"
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .drag{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: red;
+            top:100px;
+            left: 100px;
+            cursor:move;
+        }
+    </style>
+</head>
+<body>
+    <div class="drag"></div>
+</body>
+<script>
+    window.onload = function(){
+        var drag = document.getElementsByClassName('drag')[0];
+        drag.onmousedown = function(e){
+            var e = e || window.event; //兼容ie浏览器
+            var diffx = e.clientX - drag.offsetLeft;
+            var diffy = e.clientY - drag.offsetTop;
+            document.onmousemove = function(e){
+            var e = e || window.event; //兼容ie浏览器
+            var left = e.clientX-diffx;
+            var top = e.clientY-diffy;   
+            drag.style.left = left+'px'
+            drag.style.top = top+'px'
+        }   
+        }    
+        document.onmouseup = function(e){
+                this.onmousedown = null
+                this.onmousemove = null
+            }
+    }
+</script>
+</html>

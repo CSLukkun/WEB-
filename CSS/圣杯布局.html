@@ -6,7 +6,6 @@
     <title>Document</title>
     <style>
 .container{
-    position: relative;
     height: 300px;
     background-color: #ddd;
     padding: 0 300px 0;
@@ -18,28 +17,30 @@
     background-color: crimson;
 }
 .container .left{
-    float: left;
     position: relative;
+    float: left;
     height: 300px;
     width: 300px;
     margin-left: -100%;
-    left:-300px;
-    background-color:black
+    background-color:black;
+    left:-300px
 }
 .container .right{
     float: left;
-    position: relative;
     height: 300px;
     width: 300px;
     margin-left: -300px;
-    left:300px;
-    background-color: blanchedalmond
+    background-color: blanchedalmond;
+    position: relative;
+    left:300px
 }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="middle"></div>
+        <div class="middle">
+            当包裹盒子Container的position为relative时，它的所有子元素都会随之一起移动。
+        </div>
         <!-- 预先加载 -->
         <div class="left"></div>
         <div class="right"></div>

@@ -24,5 +24,30 @@
         document.body.removeChild(newform);
         alert('success')
     }
+    window.onload = function(){
+        var newform = document.createElement('form')
+        newform.method = 'POST'
+        newform.action = 'http://www.baidu.com:8080/data'
+        var newinput = document.createElement('input')
+        newinput.type = 'text'
+        newinput.name = 'username'
+        newinput.value = 'lukun'
+        newform.appendChild(newinput)
+        newform.submit()
+        document.body.removeChild(newform);
+    }
+    // 一次原生的表单提交操作
+    // window.onload = function(){
+    //     var form = document.createElement("form")
+    //     form.action = "http://www.baidu.com"
+    //     form.method = "post"
+    //     var input = document.createElement("input")
+    //     input.name = "username"
+    //     input.tyep="password"
+    //     input.value = "lk123"
+    //     form.appendChild(input)
+    //     form.submit()
+    //     document.removeChild(form)
+    // }
 </script>
 </html>

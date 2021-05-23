@@ -17,6 +17,7 @@
 					return result
 				}
 				//对<1>对参数进行区分
+					// switch的匹配是===
 				switch(vArg[0]){
 					case "#":
 						return document.getElementById(vArg.substring(1));

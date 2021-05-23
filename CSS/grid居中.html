@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: grid;
+            width: 500px;
+            height: 500px;
+            grid-template-columns: repeat(3,33.3%);
+            grid-template-rows: repeat(3,33.3%);
+            grid-template-areas: 
+            'item item item'
+            'Laside zhongjian Raside'
+            'other other other';
+        }
+        .item{
+            grid-area:zhongjian ;
+            background-color: red;
+            text-align: center;
+        }
+        .other{
+            grid-area: other;
+            background-color: aqua;
+        }
+        .Laside{
+            grid-area: Laside;
+        }
+        .Raside{
+            grid-area: Raside;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="other"></div>
+    <div class="Laside"></div>
+    <div class="item">grid-area的渲染模式非常繁琐</div>
+    <div class="Raside"></div>
+</body>
+</html>

@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
     .parent {
-  /* overflow: hidden; */
-  zoom: 1;
-}
-.left {
-  float: left;
-  margin-right: 20px;
-  width: 20%;
-}
-.right {
-  overflow: hidden;
-  zoom: 1;
-}
-        
-    </style>
+      /* overflow: hidden; */
+      zoom: 1;
+    }
+
+    .left {
+      float: left;
+      margin-right: 0;
+      width: 200px;
+    }
+
+    .right {
+      overflow: hidden;
+      /* 使用overflow溢出隐藏实现两栏式的布局 */
+    }
+    .defaultWidth{
+      background-color: blue;
+    }
+  </style>
 </head>
+
 <body>
-    <div class="parent" style="background-color: lightgrey;">
-        <div class="left" style="background-color: lightblue;">
-            <p>left</p>
-        </div>
-        <div class="right"  style="background-color: lightgreen;">
-            <p>right</p>
-            <p>right</p>
-        </div>        
+    <div class="defaultWidth">
+      空白的DIV不会占据任何宽度，一旦在DIV中添加内容时，如果未指定Width，那么该DIV就会撑起整个父元素。
     </div>
+    <div class="left" style="background-color: lightblue;">
+      <p>left</p>
+    </div>
+    <div class="right" style="background-color: lightgreen;">
+      <p>right</p>
+      <p>right</p>
+  </div>
 
 </body>
+
 </html>

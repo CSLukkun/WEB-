@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -20,7 +20,7 @@
 		</ul>
 		<script type="text/javascript">
 			var oUl = document.getElementsByTagName("ul")[0];
-			var aLi = document.getElementsByTagName("li");
+			// var aLi = document.getElementsByTagName("li");
 			// for(var i = 0 ;i < aLi.length;i++){
 			// 	aLi[i].onclick = function(){
 			// 		console.log(this.innerHTML);
@@ -43,4 +43,28 @@
 			// 	}
 		</script>
 	</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+	<script>
+		var ul = document.getElementsByTagName("ul")[0]
+		ul.onclick = function(e){
+			var target = e.target;
+			alert(target.innerText)
+		}
+	</script>
+</body>
 </html>

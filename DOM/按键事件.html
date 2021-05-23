@@ -6,7 +6,7 @@
 		<script type="text/javascript">
 			document.onkeypress = function(){
 				console.log("keypress");
-			}//按下字符键生效
+			}//按下字符键生效,不同浏览器上效果不同
 			document.onkeydown = function(){
 				console.log("keydown");
 			}//按下任意键生效
@@ -24,7 +24,6 @@
 		<script type="text/javascript">
 			var oDiv = document.getElementsByTagName("div")[0];
 			var oInput = document.getElementsByTagName("input");
-			
 			oInput[1].onclick = commentTxt; 
 			function commentTxt(){
 				oDiv.innerHTML+=oInput[0].value;

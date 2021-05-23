@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #square {
+            background-color: aqua;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+        }
+
+        #test>li:nth-child(3) {
+            background-color: red;
+        }
+
+        #center {
+            width: 400px;
+            margin: 0 auto;
+            background-color: red;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .containerbox {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="square"></div>
+    <div id='center'>1</div>
+    <div class="container">
+        <div class="containerbox">
+
+        </div>
+        <div class="containerbox">
+
+        </div>
+    </div>
+    <button class="yuanxing">denglu</button>
+    <script>
+        window.onload = function () {
+            var square = document.getElementById('square')
+            square.onclick = function () {
+                var newNode = document.createElement('h1');
+                newNode.innerHTML = '123卢坤'
+                square.appendChild(newNode)
+            }
+        }
+    </script>
+</body>
+
+</html>

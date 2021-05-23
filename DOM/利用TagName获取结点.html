@@ -11,9 +11,10 @@
 			  // var aLis = document.getElementsByTagName("li");
 			  // alert(aLis);
 			var aLis = document.getElementById("node").getElementsByTagName("li");
-			for(var i in aLis){
-			alert(aLis[i].innerHTML);
+			for(var i of aLis){
+			alert(i.innerText);
 			}
+			// 数组遍历请使用of，对象遍历使用in
 		   }
 		</script>
 	</head>

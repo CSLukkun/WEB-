@@ -13,7 +13,7 @@
             left: 50px;
             right:50px;
         }
-        move:hover{
+        .move:hover{
             cursor: pointer;
         }
     </style>
@@ -30,6 +30,7 @@
             //获取事件对象
            
             var e_down =e||window.event;
+            // e_down.target是指触发事件的元素
             //计算的x，y是点击位置 距离 目标对象的 左边 和上边 的长度
             // var x=e_down.clientX-e_down.target.offsetLeft;
             var x=e.offsetX;
@@ -38,7 +39,6 @@
             //拖拽函数放在mousedown函数里面，保证点击后才能拖拽
             //得到了点击位置距离div的位置
             document.onmousemove=function (e) {
-                
                 var e_move=e||window.event;
                 //计算的left和top值是DOM节点的左边和上边距离可视区域边缘的长度
                 var left =e_move.clientX-x;
@@ -49,20 +49,18 @@
                     left=0
                 }
                 else if(left>document.documentElement.clientWidth-e_down.target.offsetWidth){
-                    left=document.documentElement.clientWidth-e_down.target.offsetWidth
+                    left=document.documentElement.clientWidth-e_down.target.offsetWidth;
                    //这也是在判断超出边界的情况
                 }
                 if(top<0){
                     top=0
                 }
                 else if(top > document.documentElement.clientHeight - e_down.target.offsetHeight){
-                    top=document.documentElement.clientHeight - e_down.target.offsetHeight
-                    
+                    top = document.documentElement.clientHeight - e_down.target.offsetHeight
                 }
                 //设置Dom节点的left值和top值
                 move.style.left=left+'px';
                 move.style.top=top+'px';
- 
             }
         }
         //拖拽结束后，将onmousemove对象置为空
